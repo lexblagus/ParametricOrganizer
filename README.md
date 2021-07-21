@@ -2,9 +2,9 @@
 
 # Parametric Organizer
 
-https://www.thingiverse.com/thing:____
+https://www.thingiverse.com/thing:4914021
 
-https://github.com/lexblagus/____
+https://github.com/lexblagus/ParametricOrganizer
 
 ## Summary
 
@@ -26,14 +26,14 @@ Parametric holder organizer for any collection you can name: tools (bits, tips, 
 
 ## Generator
 
-At the folder `batch-generator` you can find the script to generate several files at once (Mac users only by now):
+At the GitHub in the folder `batch-generator` you can find the script to generate several files at once (Mac users only by now):
 
 - Edit `const templates` at `batch-generator/generate-all-parameter-combinations.js` as you wish
 - Run `cd batch-generator` then `./run-all-parameter-combinations.sh` to generate files. This may take a long time depending on how much combinations you created.
 
 ## Examples
 
-I did not print ayone yet (hello world!)
+I did not print anyone yet (hello world!)
 
 ![Examples 1 and 2](./images/OpenSCAD 3x3 negative 6-faces.png)
 ![Examples 1 and 2](./images/OpenSCAD 3x3 positive 6-faces.png)
