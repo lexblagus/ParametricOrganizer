@@ -1,5 +1,3 @@
-
-
 # Parametric Organizer
 
 https://www.thingiverse.com/thing:4914021
@@ -9,6 +7,17 @@ https://github.com/lexblagus/ParametricOrganizer
 ## Summary
 
 Parametric holder organizer for any collection you can name: tools (bits, tips, discs), makeup (lipstick, eyeshadows), paiting (brushes, tints) etc.
+
+## Requirements
+
+- OpenSCAD
+- Slicer software (like Cura or PrusaSlicer)
+- 3D Printer
+
+### Generator
+
+- NodeJS >= 14;
+- Bash interpreter (Mac and Linux)
 
 
 ## Parameters
@@ -26,10 +35,10 @@ Parametric holder organizer for any collection you can name: tools (bits, tips, 
 
 ## Generator
 
-At the GitHub in the folder `batch-generator` you can find the script to generate several files at once (Mac users only by now):
+At folder `generator` you can find the script to generate several files at once:
 
-- Edit `const templates` at `batch-generator/generate-all-parameter-combinations.js` as you wish
-- Run `cd batch-generator` then `./run-all-parameter-combinations.sh` to generate files. This may take a long time depending on how much combinations you created.
+- Edit `generator/models.js` as you wish;
+- Run `./run.sh` to generate files. This may take a long time depending on how much combinations you created.
 
 ## Examples
 
@@ -43,6 +52,3 @@ I did not print anyone yet (hello world!)
 ![Examples 1 and 2](./images/Cura samples 1-2.png)
 ![Examples 3 and 4](./images/Cura samples 3-4.png)
 ![Examples 5](./images/Cura samples 5.png)
-
-
-

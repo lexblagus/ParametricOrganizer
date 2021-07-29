@@ -5,18 +5,18 @@ CONFIG
 */
 $fn=360 / 10;
 
-Outer_shell_width = 40;
-Outer_shell_length = 40;
-Outer_shell_height = 8;
+Outer_shell_width = 100;
+Outer_shell_length = 100;
+Outer_shell_height = 5;
 
-Min_floor_height = 2.5;
+Min_floor_height = 1;
 
-Modules = [3, 3]; // cols, rows
+Modules = [10, 10]; // cols, rows
 
-Hang_depth_height = -4; // negative = hole depth, positive = pin height. 
-Hang_diameter = 6;
-Hang_faces = 6;
-Hang_rotation = 360 / 8 / 2;
+Hang_depth_height = -7.5; // negative = hole depth, positive = pin height. 
+Hang_diameter = 8;
+Hang_faces = 4;
+Hang_rotation = 0; // 360 / 4 / 2;
 
 Rendering_transp = 0.9;
 
@@ -97,13 +97,30 @@ module hanger(Hang_depth_height, diameter, unit_dimensions) {
 		rotate([
 			0 , 0 , Hang_rotation
 		]){
-			color("yellow", Rendering_transp) cylinder( // hangers
-				h = abs(Hang_depth_height), 
-				r1 = diameter / 2, 
-				r2 = diameter / 2, 
-				center = false,
-				$fn = Hang_faces
-			);
+			if( Hang_faces == 4 ) {
+				translate([
+					( diameter / 2 ) * -1,
+					( diameter / 2 ) * -1,
+					0
+				]){
+					color("blue", Rendering_transp) cube( // hangers
+						size = [
+							diameter,
+							diameter,
+							abs(Hang_depth_height)
+						],
+						center = false
+					);
+				};
+			} else {
+				color("yellow", Rendering_transp) cylinder( // hangers
+					h = abs(Hang_depth_height), 
+					r1 = diameter / 2, 
+					r2 = diameter / 2, 
+					center = false,
+					$fn = Hang_faces
+				);
+			}
 		}
 	}
 }
