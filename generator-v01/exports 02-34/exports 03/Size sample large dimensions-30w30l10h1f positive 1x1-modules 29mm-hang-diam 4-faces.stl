@@ -1,0 +1,198 @@
+solid OpenSCAD_Model
+  facet normal 1 -0 0
+    outer loop
+      vertex 30 0 10
+      vertex 30 30 0
+      vertex 30 30 10
+    endloop
+  endfacet
+  facet normal 1 0 0
+    outer loop
+      vertex 30 30 0
+      vertex 30 0 10
+      vertex 30 0 0
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 30 30 10
+      vertex 25.253 25.253 10
+      vertex 30 0 10
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 30 30 10
+      vertex 4.74695 25.253 10
+      vertex 25.253 25.253 10
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 4.74695 25.253 10
+      vertex 0 30 10
+      vertex 4.74695 4.74695 10
+    endloop
+  endfacet
+  facet normal -0 0 1
+    outer loop
+      vertex 0 30 10
+      vertex 4.74695 25.253 10
+      vertex 30 30 10
+    endloop
+  endfacet
+  facet normal -0 0 1
+    outer loop
+      vertex 25.253 4.74695 10
+      vertex 30 0 10
+      vertex 25.253 25.253 10
+    endloop
+  endfacet
+  facet normal -0 0 1
+    outer loop
+      vertex 4.74695 4.74695 10
+      vertex 30 0 10
+      vertex 25.253 4.74695 10
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 4.74695 4.74695 10
+      vertex 0 0 10
+      vertex 30 0 10
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 0 0 10
+      vertex 4.74695 4.74695 10
+      vertex 0 30 10
+    endloop
+  endfacet
+  facet normal -1 0 0
+    outer loop
+      vertex 0 0 0
+      vertex 0 30 10
+      vertex 0 30 0
+    endloop
+  endfacet
+  facet normal -1 -0 0
+    outer loop
+      vertex 0 30 10
+      vertex 0 0 0
+      vertex 0 0 10
+    endloop
+  endfacet
+  facet normal 0 1 -0
+    outer loop
+      vertex 30 30 0
+      vertex 0 30 10
+      vertex 30 30 10
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 0 30 10
+      vertex 30 30 0
+      vertex 0 30 0
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 0 0 0
+      vertex 30 0 10
+      vertex 0 0 10
+    endloop
+  endfacet
+  facet normal 0 -1 -0
+    outer loop
+      vertex 30 0 10
+      vertex 0 0 0
+      vertex 30 0 0
+    endloop
+  endfacet
+  facet normal -1 0 0
+    outer loop
+      vertex 4.74695 4.74695 10
+      vertex 4.74695 25.253 20
+      vertex 4.74695 25.253 10
+    endloop
+  endfacet
+  facet normal -1 -0 0
+    outer loop
+      vertex 4.74695 25.253 20
+      vertex 4.74695 4.74695 10
+      vertex 4.74695 4.74695 20
+    endloop
+  endfacet
+  facet normal 0 1 -0
+    outer loop
+      vertex 25.253 25.253 10
+      vertex 4.74695 25.253 20
+      vertex 25.253 25.253 20
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 4.74695 25.253 20
+      vertex 25.253 25.253 10
+      vertex 4.74695 25.253 10
+    endloop
+  endfacet
+  facet normal 1 -0 0
+    outer loop
+      vertex 25.253 4.74695 20
+      vertex 25.253 25.253 10
+      vertex 25.253 25.253 20
+    endloop
+  endfacet
+  facet normal 1 0 0
+    outer loop
+      vertex 25.253 25.253 10
+      vertex 25.253 4.74695 20
+      vertex 25.253 4.74695 10
+    endloop
+  endfacet
+  facet normal -0 0 1
+    outer loop
+      vertex 4.74695 25.253 20
+      vertex 25.253 4.74695 20
+      vertex 25.253 25.253 20
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 25.253 4.74695 20
+      vertex 4.74695 25.253 20
+      vertex 4.74695 4.74695 20
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 4.74695 4.74695 10
+      vertex 25.253 4.74695 20
+      vertex 4.74695 4.74695 20
+    endloop
+  endfacet
+  facet normal 0 -1 -0
+    outer loop
+      vertex 25.253 4.74695 20
+      vertex 4.74695 4.74695 10
+      vertex 25.253 4.74695 10
+    endloop
+  endfacet
+  facet normal 0 0 -1
+    outer loop
+      vertex 0 0 0
+      vertex 30 30 0
+      vertex 30 0 0
+    endloop
+  endfacet
+  facet normal -0 0 -1
+    outer loop
+      vertex 30 30 0
+      vertex 0 0 0
+      vertex 0 30 0
+    endloop
+  endfacet
+endsolid OpenSCAD_Model

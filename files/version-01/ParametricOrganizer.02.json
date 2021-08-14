@@ -1,0 +1,31 @@
+{
+    "parameterSets": {
+        "Default values": {
+            "minFloorHeight": "2.5",
+            "moduleConfig": "[]",
+            "modules": "[]",
+            "outerShellHeight": "25",
+            "outerShellLength": "50",
+            "outerShellWidth": "150",
+            "trnsp": "0.75"
+        },
+        "Example #1": {
+            "minFloorHeight": "2.5",
+            "moduleConfig": "[]",
+            "modules": "[]",
+            "outerShellHeight": "25",
+            "outerShellLength": "50",
+            "outerShellWidth": "150",
+            "trnsp": "0.75"
+        },
+        "Example #2": {
+            "minFloorHeight": "2.5",
+            "moduleConfig": "[]",
+            "modules": "[]",
+            "outerShellHeight": "25",
+            "outerShellLength": "50",
+            "outerShellWidth": "150",
+            "trnsp": "0.75"
+        },
+    }
+}

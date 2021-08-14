@@ -1,0 +1,198 @@
+solid OpenSCAD_Model
+  facet normal 1 -0 0
+    outer loop
+      vertex 30 0 10
+      vertex 30 30 0
+      vertex 30 30 10
+    endloop
+  endfacet
+  facet normal 1 0 0
+    outer loop
+      vertex 30 30 0
+      vertex 30 0 10
+      vertex 30 0 0
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 30 30 10
+      vertex 22.4246 22.4246 10
+      vertex 30 0 10
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 30 30 10
+      vertex 7.57538 22.4246 10
+      vertex 22.4246 22.4246 10
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 7.57538 22.4246 10
+      vertex 0 30 10
+      vertex 7.57538 7.57538 10
+    endloop
+  endfacet
+  facet normal -0 0 1
+    outer loop
+      vertex 0 30 10
+      vertex 7.57538 22.4246 10
+      vertex 30 30 10
+    endloop
+  endfacet
+  facet normal -0 0 1
+    outer loop
+      vertex 22.4246 7.57538 10
+      vertex 30 0 10
+      vertex 22.4246 22.4246 10
+    endloop
+  endfacet
+  facet normal -0 0 1
+    outer loop
+      vertex 7.57538 7.57538 10
+      vertex 30 0 10
+      vertex 22.4246 7.57538 10
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 7.57538 7.57538 10
+      vertex 0 0 10
+      vertex 30 0 10
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 0 0 10
+      vertex 7.57538 7.57538 10
+      vertex 0 30 10
+    endloop
+  endfacet
+  facet normal -1 0 0
+    outer loop
+      vertex 0 0 0
+      vertex 0 30 10
+      vertex 0 30 0
+    endloop
+  endfacet
+  facet normal -1 -0 0
+    outer loop
+      vertex 0 30 10
+      vertex 0 0 0
+      vertex 0 0 10
+    endloop
+  endfacet
+  facet normal 0 1 -0
+    outer loop
+      vertex 30 30 0
+      vertex 0 30 10
+      vertex 30 30 10
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 0 30 10
+      vertex 30 30 0
+      vertex 0 30 0
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 0 0 0
+      vertex 30 0 10
+      vertex 0 0 10
+    endloop
+  endfacet
+  facet normal 0 -1 -0
+    outer loop
+      vertex 30 0 10
+      vertex 0 0 0
+      vertex 30 0 0
+    endloop
+  endfacet
+  facet normal -1 0 0
+    outer loop
+      vertex 7.57538 7.57538 10
+      vertex 7.57538 22.4246 20
+      vertex 7.57538 22.4246 10
+    endloop
+  endfacet
+  facet normal -1 -0 0
+    outer loop
+      vertex 7.57538 22.4246 20
+      vertex 7.57538 7.57538 10
+      vertex 7.57538 7.57538 20
+    endloop
+  endfacet
+  facet normal 0 1 -0
+    outer loop
+      vertex 22.4246 22.4246 10
+      vertex 7.57538 22.4246 20
+      vertex 22.4246 22.4246 20
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 7.57538 22.4246 20
+      vertex 22.4246 22.4246 10
+      vertex 7.57538 22.4246 10
+    endloop
+  endfacet
+  facet normal 1 -0 0
+    outer loop
+      vertex 22.4246 7.57538 20
+      vertex 22.4246 22.4246 10
+      vertex 22.4246 22.4246 20
+    endloop
+  endfacet
+  facet normal 1 0 0
+    outer loop
+      vertex 22.4246 22.4246 10
+      vertex 22.4246 7.57538 20
+      vertex 22.4246 7.57538 10
+    endloop
+  endfacet
+  facet normal -0 0 1
+    outer loop
+      vertex 7.57538 22.4246 20
+      vertex 22.4246 7.57538 20
+      vertex 22.4246 22.4246 20
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 22.4246 7.57538 20
+      vertex 7.57538 22.4246 20
+      vertex 7.57538 7.57538 20
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 7.57538 7.57538 10
+      vertex 22.4246 7.57538 20
+      vertex 7.57538 7.57538 20
+    endloop
+  endfacet
+  facet normal 0 -1 -0
+    outer loop
+      vertex 22.4246 7.57538 20
+      vertex 7.57538 7.57538 10
+      vertex 22.4246 7.57538 10
+    endloop
+  endfacet
+  facet normal 0 0 -1
+    outer loop
+      vertex 0 0 0
+      vertex 30 30 0
+      vertex 30 0 0
+    endloop
+  endfacet
+  facet normal -0 0 -1
+    outer loop
+      vertex 30 30 0
+      vertex 0 0 0
+      vertex 0 30 0
+    endloop
+  endfacet
+endsolid OpenSCAD_Model
