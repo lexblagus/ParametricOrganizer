@@ -8,6 +8,7 @@ const inputFilename = '../files/ParametricOrganizer.scad';
 const outputJson = '../files/ParametricOrganizer.json';
 const dirOutput = `./exports`;
 const dryRun = false;
+const clearDir = true;
 let json = {
 	parameterSets: {},
 	fileFormatVersion: 1
@@ -17,10 +18,17 @@ let json = {
 const stripedNumber = n => n.toString().replace(/(\d+)(\.)(\d{2})(\d*)/, '$1$2$3');
 
 
-try{
-	// !dryRun && execSync(`rm -rf ${dirOutput}`);
-	// !dryRun && execSync(`mkdir ${dirOutput}`);
-} catch (e){}
+if( clearDir ){
+	try{
+		// !dryRun && execSync(`rm -rf ${dirOutput}`);
+	} catch (e){}
+	try{
+		!dryRun && execSync(`mkdir ${dirOutput}`);
+	} catch (e){}
+	try{
+		!dryRun && execSync(`rm -r ${dirOutput}/*`);
+	} catch (e){}
+}
 
 
 console.log('='.repeat(80));
@@ -45,6 +53,7 @@ templateModels.map(templateModel => {
 		execThis += `"${execOpenSCAD}" `;
 		execThis += `-o "${outputFilename}" `;
 		Object.keys(templateModel.params).map( prop => {
+			console.log(`    ${prop}="${JSON.stringify(templateModel.params[prop])}"`);
 			execThis += `-D ${prop}="${JSON.stringify(templateModel.params[prop])}" `;
 		});
 		execThis += `"${inputFilename}" `;
@@ -55,19 +64,25 @@ templateModels.map(templateModel => {
 });
 
 
-console.log('='.repeat(80));
-console.log(`json = ${JSON.stringify( json , null , '\t' )}`);
-fs.writeFile(
-	outputJson,
-	JSON.stringify(json, null, ' '.repeat(4)),
-	err => {
-		if (err) {
-			console.log('Error writing file', err);
-		} else {
-			console.log('Successfully wrote file');
+
+
+if( !dryRun ){
+	console.log('='.repeat(80));
+	// console.log(`json = ${JSON.stringify( json , null , '\t' )}`);
+	fs.writeFile(
+		outputJson,
+		JSON.stringify(json, null, ' '.repeat(4)),
+		err => {
+			if (err) {
+				console.log(`Error writing ${outputJson}`, err);
+			} else {
+				console.log(`Successfully wrote ${outputJson}`);
+			}
 		}
-	}
-);
+	);
+}
+
+
 
 
 console.log('='.repeat(80));

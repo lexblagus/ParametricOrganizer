@@ -4,9 +4,10 @@ const width = 70;
 const pinDiameter = 17;
 const pinFittingGap = 0.11;
 const hangFaces = 360 / 4;
+const active = false;
 
 module.exports = [{
-	active: true,
+	active,
 	name: `Spool holder positive`,
 	params: {
 		width: size,
@@ -24,7 +25,7 @@ module.exports = [{
 		],
 	},
 },{
-	active: true,
+	active,
 	name: `Spool holder negative`,
 	params: {
 		width: size,

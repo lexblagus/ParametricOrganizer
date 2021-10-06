@@ -1,6 +1,6 @@
 module.exports = [
 	{
-		active: true,
+		active: false,
 		name: 'New model',
 		params: {
 			width: 50,
