@@ -5,33 +5,33 @@ const gap = 0.4;
 
 const tipsSizes = {
 	'Big blower': [
-		16,
-		16.5,
-		12.2
+		16, // width
+		16.5, // length
+		12.2, // depth
 	],
 	'Scratcher': [
-		11.6,
-		8
+		11.6, // diameter
+		8, // depth
 	],
 	'Tall knife': [
-		8.5,
-		11
+		8.5, // diameter
+		11, // depth
 	],
 	'Precision knife': [
-		9,
-		10
+		9, // diameter
+		10, // depth
 	],
 	'Screw adapter': [
-		10.5,
-		12
+		10.5, // diameter
+		12, // depth
 	],
 	'Micro blower': [
-		8.5,
-		7.3
+		8.5, // diameter
+		7.3, // depth
 	],
 	'Soldering tip': [
-		8.6,
-		7.6 
+		8.6, // diameter
+		7.6, // depth
 	],
 };
 

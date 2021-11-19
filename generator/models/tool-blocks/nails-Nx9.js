@@ -1,5 +1,4 @@
 const faces = 360 / 10;
-const gap = 0.4;
 const height = 15; // 15, 20, 25, 30
 const floorHeight = 1;
 const depth = 5;
@@ -10,8 +9,8 @@ const active = false;
 const nailHoleDiam = 1.6; // 1.9 max
 
 const defaults = [
-	nailHoleDiam + gap,
-	nailHoleDiam + gap,
+	nailHoleDiam,
+	nailHoleDiam,
 	0 - depth,
 	0,
 	faces,
