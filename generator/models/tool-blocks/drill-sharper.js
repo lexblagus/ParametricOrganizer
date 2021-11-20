@@ -3,7 +3,7 @@ const gap = 0.4;
 const height = 15;
 const floorHeight = 1;
 const emptyHoc = [0,0,0,0,3,0];
-const active = true;
+const active = false;
 
 
 const diam = 17.3;

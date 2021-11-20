@@ -1,15 +1,20 @@
 const floorHeight = 1;
 const height = 25;
 const faces = 4;
-const thickness = 1.2;
+const thickness = 1.2; // measured: Dexter 0.9
 const emptyHoc = [0,0,0,0,3,0];
-const active = false;
+const active = true;
+
+const width = 150;
+const length = 50;
 
 const tipDiameters = [
+	15, //  Dexter Power 5908.A-A4-BIM
 	30,
 	32.55,
 	51,
-	102.8
+	102.8,
+	width - 10
 ];
 
 const tipDiameterConfig = tipDiameters.map(tipDiameter => ([
@@ -26,25 +31,48 @@ module.exports = [
 		active,
 		name: 'Oscilating tool tips',
 		params: {
-			width: 200,
-			length: 50,
+			width,
+			length,
 			height,
 			floorHeight,
-			moduleQtt: [3, 2],
+			moduleQtt: [1, 15],
 			hoc: emptyHoc,
 			moduleConfig: [
 				[
-					tipDiameterConfig[0],
-					tipDiameterConfig[2],
-				],
+					emptyHoc,
+					tipDiameterConfig[5],
+					tipDiameterConfig[5],
+					tipDiameterConfig[5],
+					tipDiameterConfig[5],
+					tipDiameterConfig[5],
+					tipDiameterConfig[5],
+					tipDiameterConfig[5],
+					tipDiameterConfig[5],
+					tipDiameterConfig[5],
+					tipDiameterConfig[5],
+					tipDiameterConfig[5],
+					tipDiameterConfig[5],
+					tipDiameterConfig[5],
+					emptyHoc,
+				]
+				/*
 				[
-					tipDiameterConfig[1],
+					tipDiameterConfig[0],
 					tipDiameterConfig[3],
 				],
 				[
-					tipDiameterConfig[2],
-					tipDiameterConfig[2],
+					tipDiameterConfig[1],
+					tipDiameterConfig[4],
 				],
+				[
+					tipDiameterConfig[2],
+					tipDiameterConfig[4],
+				],
+				[
+					tipDiameterConfig[3],
+					tipDiameterConfig[3],
+				],
+				*/
 			],
 		},
 	},

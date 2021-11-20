@@ -6,7 +6,7 @@ const widthBlockMultipliers = [1, 2, 3, 4, 5]; // make double or triple blocks, 
 const modulesQtt = 9;  // actualy is 4x4 or 3x3 but more holes looks better
 const active = false;
 
-const nailHoleDiam = 1.6; // 1.9 max
+const nailHoleDiam = 1.8; // 1.6 first try // 1.9 max // 1.63 measured
 
 const defaults = [
 	nailHoleDiam,
