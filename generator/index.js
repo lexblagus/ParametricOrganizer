@@ -8,7 +8,7 @@ const inputFilename = '../files/ParametricOrganizer.scad';
 const outputJson = '../files/ParametricOrganizer.json';
 const dirOutput = `./exports`;
 const dryRun = false;
-const clearDir = false;
+const clearDir = true;
 let json = {
 	parameterSets: {},
 	fileFormatVersion: 1

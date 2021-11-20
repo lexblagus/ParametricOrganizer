@@ -3,7 +3,7 @@ const height = 25;
 const faces = 4;
 const thickness = 1.2; // measured: Dexter 0.9
 const emptyHoc = [0,0,0,0,3,0];
-const active = true;
+const active = false;
 
 const width = 150;
 const length = 50;

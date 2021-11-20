@@ -6,7 +6,7 @@ const emptyHoc = [0,0,0,0,3,0];
 const active = false;
 
 
-const diam = 17.3;
+const diam = 17.1;
 const config = [
 	diam,
 	diam,
@@ -21,7 +21,7 @@ module.exports = [{
 	active,
 	name: 'Drill sharper',
 	params: {
-		width: 50 * 4,
+		width: 50 * 3,
 		length: 50,
 		height,
 		floorHeight,
