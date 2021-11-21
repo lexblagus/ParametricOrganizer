@@ -39,7 +39,7 @@ console.log("Begin iterate variations", dryRun ? ' in dryrun mode' : '' );
 
 
 templateModels.map(templateModel => {
-	if ( templateModel && templateModel.active === true ) {
+	if ( templateModel && templateModel.active === true /* */ ) {
 		console.log('-'.repeat(80));
 		json.parameterSets[templateModel.name] = templateModel.params;
 

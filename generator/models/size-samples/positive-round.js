@@ -1,5 +1,5 @@
 const faces = 360 / 10;
-const active =  true;
+const active =  false;
 const namePrefix = 'Size samples positive round';
 const height = 25;
 

@@ -3,7 +3,7 @@ const gap = 0.4;
 const size = 23 + gap;
 const holeDepth = 12.75;
 const floorHeight = 1;
-const active = true;
+const active = false;
 
 module.exports = [
 	{
