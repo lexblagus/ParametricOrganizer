@@ -1,7 +1,7 @@
 const faces = 360 / 10;
 const height = 15;
 const floorHeight = 1;
-const active = true;
+const active = false;
 
 const depth = height - floorHeight;
 const moduleSize = 5;
@@ -26,6 +26,7 @@ const shanks = [
 	0.8,
 	0.9,
 	1.0,
+	1.1,
 	1.2,
 	1.3,
 	1.4,
@@ -35,15 +36,6 @@ const shanks = [
 	1.8,
 	1.9,
 	2.0,
-	2.2,
-	2.3,
-	2.4,
-	2.5,
-	2.6,
-	2.7,
-	2.8,
-	2.9,
-	3.0,
 ].reverse();
 
 const moduleRow = shanks.map(d => ([
