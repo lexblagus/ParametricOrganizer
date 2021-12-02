@@ -4,7 +4,7 @@ const active = false;
 const development = [
 	{
 		active,
-		name: 'Development model 1',
+		name: 'Development model 1 simple box',
 		params: {
 			width: 100,
 			length: 100,
@@ -16,7 +16,7 @@ const development = [
 	},
 	{
 		active,
-		name: 'Development model 2',
+		name: 'Development model 2 box 2x2 one shallow',
 		params: {
 			width: 100,
 			length: 100,
@@ -29,7 +29,7 @@ const development = [
 	},
 	{
 		active,
-		name: 'Development model 3',
+		name: 'Development model 3 default hole one chanfer',
 		params: {
 			width: 75,
 			length: 75,
@@ -42,7 +42,36 @@ const development = [
 	},
 	{
 		active,
-		name: 'Development model 4',
+		name: 'Development model 4 two consecutve holes',
+		params: {
+			width: 100,
+			length: 100,
+			height: 50,
+			floorHeight: 2.5,
+			moduleQtt: [3, 3],
+			hoc: [0,0,0,0,3,0],
+			moduleConfig: [
+				[
+					[],
+					[],
+					[],
+				],
+				[
+					[],
+					[ 30, 30, -10, -15, (360/10), 0 ],
+					[],
+				],
+				[
+					[],
+					[],
+					[],
+				],
+			]
+		},
+	},
+	{
+		active,
+		name: 'Development model 5 examples',
 		params: {
 			width: 100,
 			length: 100,
@@ -121,7 +150,7 @@ const development = [
 	},
 	{
 		active,
-		name: 'Development model 5',
+		name: 'Development model 6 dynamically generated faces and rotations',
 		params: {
 			width: 200,
 			length: 200,
@@ -150,35 +179,6 @@ const development = [
 					)
 				),
 			],
-		},
-	},
-	{
-		active,
-		name: 'Development model 6',
-		params: {
-			width: 100,
-			length: 100,
-			height: 50,
-			floorHeight: 2.5,
-			moduleQtt: [3, 3],
-			hoc: [0,0,0,0,3,0],
-			moduleConfig: [
-				[
-					[],
-					[],
-					[],
-				],
-				[
-					[],
-					[ 30, 30, -10, -15, (360/10), 0 ],
-					[],
-				],
-				[
-					[],
-					[],
-					[],
-				],
-			]
 		},
 	},
 ];

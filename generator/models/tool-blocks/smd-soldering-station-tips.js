@@ -1,14 +1,18 @@
 const faces = 360 / 10;
-const gap = 0.4;
-const size = 23 + gap;
+
+const chanferSize = 20;
+const chanferHeight = 12;
+
+const holeSize = 24; // previouslly: 23.4
 const holeDepth = 12.75;
+
 const floorHeight = 1;
 const active = false;
 
 module.exports = [
 	{
 		active,
-		name: 'SMD soldering station tips',
+		name: 'SMD soldering station tips positive',
 		params: {
 			width: 50,
 			length: 50,
@@ -16,8 +20,27 @@ module.exports = [
 			floorHeight: 1,
 			moduleQtt: [2, 2],
 			hoc: [
-				size,
-				size,
+				chanferSize,
+				chanferSize,
+				chanferHeight,
+				0,
+				faces,
+				0
+			],
+		},
+	},
+	{
+		active,
+		name: 'SMD soldering station tips negative',
+		params: {
+			width: 50,
+			length: 50,
+			height: 15, // 15, 20, 25
+			floorHeight: 1,
+			moduleQtt: [2, 2],
+			hoc: [
+				holeSize,
+				holeSize,
 				0 - holeDepth,
 				0,
 				faces,

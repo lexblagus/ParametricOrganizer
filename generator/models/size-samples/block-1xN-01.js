@@ -1,7 +1,11 @@
+// Size samples for 'Nail blocks'
+
+
 const faces = 360 / 10;
 const height = 15;
 const floorHeight = 1;
-const active = false;
+const active = true;
+
 
 const depth = height - floorHeight;
 const moduleSize = 5;
@@ -51,7 +55,7 @@ const moduleConfig = [ moduleRow ]; // [ moduleRow.map(mdl => mdl) ];
 
 const sizeSamplesBlock = {
 	active,
-	name: `Size sample 1xN block`,
+	name: `Size sample 1xN block 01 for nails block 0p1-2mm`,
 	params: {
 		width: moduleSize,
 		length: moduleSize * (shanks .length),

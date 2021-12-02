@@ -19,15 +19,10 @@ const stripedNumber = n => n.toString().replace(/(\d+)(\.)(\d{2})(\d*)/, '$1$2$3
 
 
 if( clearDir ){
-	try{
-		// !dryRun && execSync(`rm -rf ${dirOutput}`);
-	} catch (e){}
-	try{
-		!dryRun && execSync(`mkdir ${dirOutput}`);
-	} catch (e){}
-	try{
-		!dryRun && execSync(`rm -r ${dirOutput}/*`);
-	} catch (e){}
+	// try to create
+	try{ !dryRun && execSync(`mkdir ${dirOutput}`); } catch (e){}
+	// erase exiting contents
+	try{ !dryRun && execSync(`rm -r ${dirOutput}/*`); } catch (e){}
 }
 
 
