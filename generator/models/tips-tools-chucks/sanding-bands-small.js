@@ -6,7 +6,7 @@ const chanferHeight = 10;
 // 1x1, 2x1 (2x1 x 9x9 = 18x9), 3x1 (3x1 x 9x9 = 29x9)
 const widthBlockMultipliers = [1, 2]; // , 3, 4, 5];
 const modulesQtt = 4;
-const active = true;
+const active = false;
 
 const chanferDiam = 5.5;
 
