@@ -8,6 +8,7 @@ const inputFilename = '../files/ParametricOrganizer.scad';
 const outputJson = './exports/ParametricOrganizer.json'; // or '../files/ParametricOrganizer.json'
 const dirOutput = `./exports`;
 const dryRun = false;
+const activeOnly = true;
 const clearDir = false;
 let json = {
 	parameterSets: {},
@@ -34,7 +35,7 @@ console.log("Begin iterate variations", dryRun ? ' in dryrun mode' : '' );
 
 
 templateModels.map(templateModel => {
-	if ( templateModel && templateModel.active === true /* */ ) {
+	if ( templateModel && (templateModel.active === true || activeOnly !== true) ) {
 		console.log('-'.repeat(80));
 		json.parameterSets[templateModel.name] = templateModel.params;
 

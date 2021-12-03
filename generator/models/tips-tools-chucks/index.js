@@ -7,6 +7,8 @@ const dremelChucks = require('./dremel-chucks');
 const drillSharper = require('./drill-sharper');
 const routerAdapters = require('./router-adapters');
 const oscilatingToolTips = require('./oscilating-tool-tips');
+const sandingBandsSmall = require('./sanding-bands-small');
+const sandingBandsLarge = require('./sanding-bands-large');
 
 module.exports = [
 	...miniSawDisks,
@@ -18,4 +20,6 @@ module.exports = [
 	...drillSharper,
 	...routerAdapters,
 	...oscilatingToolTips,
+	...sandingBandsSmall,
+	...sandingBandsLarge,
 ];

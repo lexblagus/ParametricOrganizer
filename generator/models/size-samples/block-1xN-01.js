@@ -4,7 +4,7 @@
 const faces = 360 / 10;
 const height = 15;
 const floorHeight = 1;
-const active = true;
+const active = false;
 
 
 const depth = height - floorHeight;
