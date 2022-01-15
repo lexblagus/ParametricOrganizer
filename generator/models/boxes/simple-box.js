@@ -3,7 +3,7 @@ const capStyle = 'cover'; // 'cover' or 'chanfer'
 const capHeight = 5;
 const thickness = 1;
 const gap = 0.2;
-const active = true;
+const active = false;
 
 
 module.exports = [
@@ -27,7 +27,7 @@ module.exports = [
 		},
 	},
 	{
-		active: capStyle === 'chanfer',
+		active: active && capStyle === 'chanfer',
 		name: 'Simple box chanfer cap',
 		params: {
 			width: dimensions[0],
@@ -46,7 +46,7 @@ module.exports = [
 		},
 	},
 	{
-		active: capStyle === 'cover',
+		active: active && capStyle === 'cover',
 		name: 'Simple box cover cap',
 		params: {
 			width: dimensions[0] + ( gap * 2 ) + ( thickness * 2 ),
