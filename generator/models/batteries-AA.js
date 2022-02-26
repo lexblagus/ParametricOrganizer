@@ -2,7 +2,7 @@ const faces = 360 / 10;
 const size = 15; // 11 for AAA
 const height = 25;
 const floorHeight = 2.5;
-const active = true;
+const active = false;
 
 module.exports = [
 	{

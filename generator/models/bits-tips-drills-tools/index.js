@@ -1,3 +1,4 @@
+const hexBits = require('./hex-bits');
 const microHexBits = require('./micro-hex-bits');
 const drillsConcrete = require('./drills-concrete');
 const drillsSteel01 = require('./drills-steel-01');
@@ -10,6 +11,7 @@ const dremelBitsLarge6x6 = require('./dremel-bits-L-6x6');
 const dremelBitsLargeNx9 = require('./dremel-bits-L-Nx9');
 
 module.exports = [
+	...hexBits,
 	...microHexBits,
 	...drillsConcrete,
 	...drillsSteel01,
