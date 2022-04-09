@@ -10,15 +10,25 @@ Parametric holder organizer for any collection you can name: tools (bits, tips, 
 
 ## Requirements
 
-- OpenSCAD
-- Slicer software (like Cura or PrusaSlicer)
-- 3D Printer
-
-### Generator
-
 - NodeJS >= 14;
-- Bash interpreter (Mac and Linux)
+- Bash interpreter (Mac and Linux);
+- [OpenSCAD](https://openscad.org/);
 
+## Generator
+
+`./run.sh` to generate files. This may take a long time depending on how much combinations you created.
+
+## Examples
+
+In the foldert `generator/models` will will find several examples based on my personal needs.
+
+- boxes with caps
+- perfured blocs for workshop:
+  - batteries AA and AAA
+  - screw bits
+  - dremel tips
+- drills
+- drawer organizers
 
 ## Parameters
 
@@ -33,22 +43,3 @@ Parametric holder organizer for any collection you can name: tools (bits, tips, 
 - `Hang_rotation`: rotate the hanger, usefull for 3 to 8 faces
 
 
-## Generator
-
-At folder `generator` you can find the script to generate several files at once:
-
-- Edit `generator/models.js` as you wish;
-- Run `./run.sh` to generate files. This may take a long time depending on how much combinations you created.
-
-## Examples
-
-I did not print anyone yet (hello world!)
-
-![Examples 1 and 2](./images/OpenSCAD 3x3 negative 6-faces.png)
-![Examples 1 and 2](./images/OpenSCAD 3x3 positive 6-faces.png)
-![Examples 1 and 2](./images/OpenSCAD 3x6 negative 8-faces.png)
-![Examples 1 and 2](./images/OpenSCAD 5x10 negative 90-faces.png)
-
-![Examples 1 and 2](./images/Cura samples 1-2.png)
-![Examples 3 and 4](./images/Cura samples 3-4.png)
-![Examples 5](./images/Cura samples 5.png)

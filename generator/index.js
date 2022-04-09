@@ -1,84 +1,85 @@
+const fs = require("fs");
 const { execSync } = require('child_process');
 const templateModels = require('./models');
 
 
 const execOpenSCAD = '/Applications/OpenSCAD.app/Contents/MacOS/OpenSCAD';
 const inputFilename = '../files/ParametricOrganizer.scad';
+const outputJson = './exports/ParametricOrganizer.json'; // or '../files/ParametricOrganizer.json'
 const dirOutput = `./exports`;
 const dryRun = false;
+const activeOnly = true;
+const clearDir = true;
+let json = {
+	parameterSets: {},
+	fileFormatVersion: 1
+}
 
 
-try{
-	!dryRun && execSync(`rm -rf ${dirOutput}`);
-	!dryRun && execSync(`mkdir ${dirOutput}`);
-} catch (e){}
+const stripedNumber = n => n.toString().replace(/(\d+)(\.)(\d{2})(\d*)/, '$1$2$3');
+
+
+if( clearDir ){
+	// try to create
+	try{ !dryRun && execSync(`mkdir ${dirOutput}`); } catch (e){}
+	// erase exiting contents
+	try{ !dryRun && execSync(`rm -r ${dirOutput}/*`); } catch (e){}
+}
 
 
 console.log('='.repeat(80));
 console.log("Begin iterate variations", dryRun ? ' in dryrun mode' : '' );
+// console.log(JSON.stringify(templateModels, null, '\t'));
 
 
 
 
 templateModels.map(templateModel => {
-	if( templateModel.active === true ){
-		templateModel.props['Outer_shell_width'].map((Outer_shell_width, Outer_shell_width_index) => {
-			templateModel.props['Min_floor_height'].map(Min_floor_height => {
-				templateModel.props["Hang_depth_height"].map(Hang_depth_height => {
+	if ( templateModel && (templateModel.active === true || activeOnly !== true) ) {
+		console.log('-'.repeat(80));
+		json.parameterSets[templateModel.name] = templateModel.params;
 
-					for(Hang_diameter = templateModel.props["Hang_diameter"]["start"];
-						Hang_diameter <=  templateModel.props["Hang_diameter"]["end"];
-						Hang_diameter += templateModel.props["Hang_diameter"]["step"]
-					){
-						const Hang_diameter_precise = Hang_diameter.toPrecision(2);
-					
-						templateModel.props["Hang_faces"].map((Hang_faces, Hang_faces_index) => {
-							console.log('-'.repeat(80));
-							
-							const outputFilename = 
-								`${dirOutput}/` + 
-								`${templateModel.props['Outer_shell_prefix']}` + 
-								` dimensions-` + 
-								`${Outer_shell_width}w` + 
-								`${templateModel.props['Outer_shell_length'][Outer_shell_width_index]}l` + 
-								`${templateModel.props['Outer_shell_height'][Outer_shell_width_index]}h` + 
-								`${Min_floor_height}f` + 
-								` ${Hang_depth_height > 0 ? 'positive' : 'negative'}` + 
-								` ${templateModel.props['Modules'].toString().replace(',', 'x')}-modules` + 
-								` ${Hang_diameter_precise}mm-hang-diam` + 
-								` ${Hang_faces}-faces` + 
-								`.stl`;
-							console.log(`outputFilename = ${JSON.stringify(outputFilename)}`);
+		const outputFilename = 
+			`${dirOutput}/` + 
+			`${templateModel.name}` + 
+			`.stl`;
+		console.log(`outputFilename = ${JSON.stringify(outputFilename)}`);
 
-							let execThis = '';
-							execThis += `"${execOpenSCAD}" `;
-							execThis += `-o "${outputFilename}" `;
-
-							execThis += `-D Outer_shell_width="${Outer_shell_width}" `;
-							execThis += `-D Outer_shell_length="${templateModel.props['Outer_shell_length'][Outer_shell_width_index]}" `;
-							execThis += `-D Outer_shell_height="${templateModel.props['Outer_shell_height'][Outer_shell_width_index]}" `;
-							execThis += `-D Min_floor_height="${Min_floor_height}" `;
-							execThis += `-D Modules="${JSON.stringify(templateModel.props['Modules'])}" `;
-							execThis += `-D Hang_depth_height="${Hang_depth_height}" `;
-							execThis += `-D Hang_diameter="${Hang_diameter_precise}" `;
-							execThis += `-D Hang_faces="${Hang_faces}" `;
-							execThis += `-D Hang_rotation="${templateModel.props['Hang_rotation'][Hang_faces_index]}" `;
-
-							// Object.keys(templateModel['props']).map( prop => {
-							// 	execThis += `-D ${prop}="${templateModel['props'][prop]}" `;
-							// });
-
-							execThis += `"${inputFilename}" `;
-							
-							console.log(`execThis = ${execThis}`);
-							!dryRun && execSync(execThis);
-						});
-					}
-				});
-			});
+		let execThis = '';
+		execThis += `"${execOpenSCAD}" `;
+		execThis += `-o "${outputFilename}" `;
+		Object.keys(templateModel.params).map( prop => {
+			console.log(`    ${prop}="${JSON.stringify(templateModel.params[prop])}"`);
+			execThis += `-D ${prop}="${JSON.stringify(templateModel.params[prop])}" `;
 		});
+		execThis += `"${inputFilename}" `;
+		
+		console.log(`execThis = ${execThis}`);
+		!dryRun && execSync(execThis);
 	}
 });
+
+
+
+
+if( !dryRun ){
+	console.log('='.repeat(80));
+	// console.log(`json = ${JSON.stringify( json , null , '\t' )}`);
+	fs.writeFile(
+		outputJson,
+		JSON.stringify(json, null, ' '.repeat(4)),
+		err => {
+			if (err) {
+				console.log(`Error writing ${outputJson}`, err);
+			} else {
+				console.log(`Successfully wrote ${outputJson}`);
+			}
+		}
+	);
+}
+
+
+
 
 console.log('='.repeat(80));
 console.log('Done.');
