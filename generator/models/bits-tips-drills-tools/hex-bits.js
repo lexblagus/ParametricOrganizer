@@ -2,7 +2,7 @@ const faces = 360 / 10;
 const size = 7.5; // 4.7 for micro
 const holeDepth = 18;
 const floorHeight = 1;
-const active = true;
+const active = false;
 
 module.exports = [
 	{
