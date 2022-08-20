@@ -1,15 +1,15 @@
-const msdcDimensions = [24, 32, 2]; // width, height, thickness
-const visibleHeight = msdcDimensions[1] - 5; // naked area
-const moduleQtt = [2, 14]; // cols, rows
+const msdcDimensions = [11, 15, 1]; // width, height, thickness
+const visibleHeight = 12.5; // naked area
+const moduleQtt = [4, 24]; // cols, rows
 const floorHeight = 0.75; // floor thickness
 const wallThickness = floorHeight;
-const coverHeight = 15;
+const coverHeight = 10;
 const clearanceGrid = 0.25; // additional spacing for machine tolerance
 const clearanceFloor = 1.5; // aditional height
 const clearanceBox = 0.25;
 const clearanceCover = 0.15;
 const spacingXBetween = floorHeight; // 1.45 * 2;
-const spacingYBetween = floorHeight + 0.53334; // 2.5;
+const spacingYBetween = floorHeight; // 2.5;
 const active = false;
 
 
@@ -40,7 +40,7 @@ const coverHocHeight = 0 - coverHeight + floorHeight;
 module.exports = [
 	{
 		active,
-		name: 'SD cards grid',
+		name: 'Micro SD cards grid',
 		params: {
 			width,
 			length,
@@ -59,7 +59,7 @@ module.exports = [
 	},
 	{
 		active,
-		name: 'SD cards box',
+		name: 'Micro SD cards box',
 		params: {
 			width: boxWidth,
 			length: boxLength,
@@ -78,7 +78,7 @@ module.exports = [
 	},
 	{
 		active,
-		name: 'SD cards cover',
+		name: 'Micro SD cards cover',
 		params: {
 			width: coverWidth,
 			length: coverLength,

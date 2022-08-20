@@ -7,8 +7,7 @@ const tipsToolsChucks = require('./tips-tools-chucks');
 const boxes = require('./boxes');
 const ringHanger = require('./ring-hanger');
 const spoolHolder = require('./spool-holder');
-const batteriesAA = require('./batteries-AA');
-const batteriesAAA = require('./batteries-AAA');
+const batteries = require('./batteries');
 
 module.exports = [
 	...newModel,
@@ -20,6 +19,5 @@ module.exports = [
 	...drawerOrganizers,
 	...ringHanger,
 	...spoolHolder,
-	...batteriesAA,
-	...batteriesAAA,
+	...batteries,
 ];
