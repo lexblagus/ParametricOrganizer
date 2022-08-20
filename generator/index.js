@@ -9,7 +9,7 @@ const outputJson = './exports/ParametricOrganizer.json'; // or '../files/Paramet
 const dirOutput = `./exports`;
 const dryRun = false;
 const activeOnly = true;
-const clearDir = true;
+const clearDir = false;
 let json = {
 	parameterSets: {},
 	fileFormatVersion: 1
