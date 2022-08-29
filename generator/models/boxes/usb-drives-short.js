@@ -1,14 +1,14 @@
 const msdcDimensions = [12.15, 35, 4.55]; // width, height, thickness
 const visibleHeight = msdcDimensions[1] - 10; // naked area
 const moduleQtt = [3, 7]; // cols, rows
-const floorHeight = 0.75; // floor thickness
+const floorHeight = 1; // floor thickness
 const wallThickness = floorHeight;
 const coverHeight = 15;
-const clearanceGrid = 0.25; // additional spacing for machine tolerance
+const clearanceGrid = 0.4; // additional spacing for machine tolerance
 const clearanceFloor = 1.5; // aditional height
 const clearanceBox = 0.25;
-const clearanceCover = 0.15;
-const spacingXBetween = 3.75;
+const clearanceCover = 0.10;
+const spacingXBetween = 4.25;
 const spacingYBetween = 2.5;
 const active = false;
 

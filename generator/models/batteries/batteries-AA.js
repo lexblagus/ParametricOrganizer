@@ -4,7 +4,7 @@ const height = 50.5 / 2; // 50.5 full height
 const spacing = 2.5;
 const moduleQtt = [4, 4];
 const floorHeight = 2.5;
-const active = true;
+const active = false;
 
 module.exports = [
 	{

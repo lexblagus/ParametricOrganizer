@@ -1,15 +1,15 @@
 const msdcDimensions = [11, 15, 1]; // width, height, thickness
-const visibleHeight = 12.5; // naked area
-const moduleQtt = [4, 24]; // cols, rows
-const floorHeight = 0.75; // floor thickness
+const visibleHeight = msdcDimensions[1] / 2; // 12.5; // naked area
+const moduleQtt = [4, 20]; // cols, rows
+const floorHeight = 1; // floor thickness
 const wallThickness = floorHeight;
 const coverHeight = 10;
-const clearanceGrid = 0.25; // additional spacing for machine tolerance
+const clearanceGrid = 0.4; // additional spacing for machine tolerance
 const clearanceFloor = 1.5; // aditional height
 const clearanceBox = 0.25;
-const clearanceCover = 0.15;
+const clearanceCover = 0.10;
 const spacingXBetween = floorHeight; // 1.45 * 2;
-const spacingYBetween = floorHeight; // 2.5;
+const spacingYBetween = floorHeight + 0.076; // 2.5;
 const active = false;
 
 
@@ -29,7 +29,7 @@ const boxLength = length + (wallThickness * 2) + (clearanceBox * 2);
 const boxHeight = msdcDimensions[1] + (floorHeight * 2) + clearanceFloor;
 const boxHocWidth = width + (clearanceBox * 2);
 const boxHocLength = length + (clearanceBox * 2);
-const boxHocHeight = 0 - msdcDimensions[1];
+const boxHocHeight = 0 - msdcDimensions[1] + clearanceFloor;
 
 const coverWidth = boxWidth + (wallThickness * 2) + (clearanceCover * 2);
 const coverLength = boxLength + (wallThickness * 2) + (clearanceCover * 2);
