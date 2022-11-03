@@ -16,7 +16,7 @@ Parametric holder organizer for any collection you can name: tools (bits, tips, 
 
 ## Generator
 
-`./run.sh` to generate files. This may take a long time depending on how much combinations you created.
+`cd ./generator` and then `./run.sh` to generate files. This may take a long time depending on how much combinations you created.
 
 ## Examples
 
