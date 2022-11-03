@@ -6,10 +6,10 @@ const wallThickness = floorHeight;
 const coverHeight = 15;
 const clearanceGrid = 0.4; // additional spacing for machine tolerance
 const clearanceFloor = 1.5; // aditional height
-const clearanceBox = 0.25;
-const clearanceCover = 0.15;
-const spacingXBetween = 7;
-const spacingYBetween = 3.875;
+const clearanceBox = 0.3;
+const clearanceCover = 0.2;
+const spacingXBetween = 7 + 8;
+const spacingYBetween = 3.875 + 4;
 const active = false;
 
 
