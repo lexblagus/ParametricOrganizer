@@ -16,7 +16,7 @@ Parametric holder organizer for any collection you can name: tools (bits, tips, 
 
 ## Generator
 
-`./run.sh` to generate files. This may take a long time depending on how much combinations you created.
+`cd ./generator` and then `./run.sh` to generate files. This may take a long time depending on how much combinations you created.
 
 ## Examples
 
@@ -30,16 +30,6 @@ In the foldert `generator/models` will will find several examples based on my pe
 - drills
 - drawer organizers
 
-## Parameters
-
-- `Outer_shell_width`: main object width
-- `Outer_shell_length`: main object length 
-- `Outer_shell_height`: main object height
-- `Min_floor_height`: minimum floor height (for negative objects)
-- `Modules`: quantity of elements per columns then per rows
-- `Hang_depth_height`: hanger (hole or pin) height. negative = hole depth, positive = pin height. 
-- `Hang_diameter`: hanger diameter. Diagonal length for 4 faces objects
-- `Hang_faces`: 3 to render triangles, 4 to render squares, or use more than 36 for rouded 
-- `Hang_rotation`: rotate the hanger, usefull for 3 to 8 faces
-
-
+<img src="./images/ScreenShot3.png" />
+<img src="./images/ScreenShot2.png" />
+<img src="./images/ScreenShot1.png" />

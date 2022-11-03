@@ -28,7 +28,7 @@ if( clearDir ){
 
 
 console.log('='.repeat(80));
-console.log("Begin iterate variations", dryRun ? ' in dryrun mode' : '' );
+console.log("Begin iterate variations", dryRun ? 'in dryrun mode' : '' );
 // console.log(JSON.stringify(templateModels, null, '\t'));
 
 
