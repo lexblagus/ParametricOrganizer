@@ -1,5 +1,5 @@
 const width = 27;
-const length = 16.5;
+const length = 17;
 const height = 48 / 2; // 48 full height
 const spacing = 2.5;
 const moduleQtt = [2, 2];
