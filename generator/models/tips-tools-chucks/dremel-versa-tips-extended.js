@@ -7,6 +7,10 @@ const length = 50;
 const height = 15; // 15, 20, 25
 
 const tipsSizes = {
+	'Main head': [
+		14.15 + 0.3 , // width
+		height - floorHeight, // depth
+	],
 	'Big blower': [
 		18.6 + 0.3 , // width
 		height - floorHeight, // depth
@@ -48,6 +52,14 @@ const tipsSizes = {
 };
 
 const tips = {
+	'Main head': [
+		tipsSizes['Main head'][0] + gap,
+		tipsSizes['Main head'][0] + gap,
+		0 - tipsSizes['Main head'][1],
+		0,
+		faces,
+		0
+	],
 	'Big blower': [
 		tipsSizes['Big blower'][0] + gap,
 		tipsSizes['Big blower'][0] + gap,
@@ -126,7 +138,29 @@ const tips = {
 module.exports = [
 	{
 		active,
-		name: 'Dremel Versatip attachments',
+		name: 'Dremel Versatip main head',
+		params: {
+			width,
+			length,
+			height,
+			floorHeight: 1,
+			moduleQtt: [2, 2],
+			hoc: [0,0,0,0,3,0],
+			moduleConfig: [
+				[
+					tips['Main head'],
+					tips['Main head'],
+				],
+				[
+					tips['Main head'],
+					tips['Main head'],
+				],
+			],
+		},
+	},
+	{
+		active,
+		name: 'Dremel Versatip big blower attachments',
 		params: {
 			width,
 			length,
@@ -137,10 +171,32 @@ module.exports = [
 			moduleConfig: [
 				[
 					tips['Big blower'],
-					tips['Scratcher'],
+					tips['Big blower'],
 				],
 				[
 					tips['Big blower'],
+					tips['Big blower'],
+				],
+			],
+		},
+	},
+	{
+		active,
+		name: 'Dremel Versatip scratcher attachments',
+		params: {
+			width,
+			length,
+			height,
+			floorHeight: 1,
+			moduleQtt: [2, 2],
+			hoc: [0,0,0,0,3,0],
+			moduleConfig: [
+				[
+					tips['Scratcher'],
+					tips['Scratcher'],
+				],
+				[
+					tips['Scratcher'],
 					tips['Scratcher'],
 				],
 			],
@@ -148,7 +204,7 @@ module.exports = [
 	},
 	{
 		active,
-		name: 'Dremel Versa tips',
+		name: 'Dremel Versa tips 1',
 		params: {
 			width,
 			length,
@@ -159,23 +215,58 @@ module.exports = [
 			moduleConfig: [
 				[
 					tips['Tall knife'],
-					tips['Precision knife'],
-					tips['Extended tips'],
-					tips['Extended tips'],
-				],[
 					tips['Tall knife'],
+					tips['Tall knife'],
+					tips['Tall knife'],
+				],[
 					tips['Precision knife'],
+					tips['Precision knife'],
+					tips['Precision knife'],
+					tips['Precision knife'],
+				],[
+					tips['Extended tips'],
+					tips['Extended tips'],
 					tips['Extended tips'],
 					tips['Extended tips'],
 				],[
-					tips['Soldering tip'],
-					tips['Screw adapter'],
-					tips['Micro blower'],
 					tips['Container'],
+					tips['Container'],
+					tips['Container'],
+					tips['Container'],
+				],
+			],
+		},
+	},
+	{
+		active,
+		name: 'Dremel Versa tips 2',
+		params: {
+			width,
+			length,
+			height,
+			floorHeight: 1,
+			moduleQtt: [4, 4],
+			hoc: [0,0,0,0,3,0],
+			moduleConfig: [
+[
+					tips['Screw adapter'],
+					tips['Screw adapter'],
+					tips['Screw adapter'],
+					tips['Screw adapter'],
+				],[
+					tips['Micro blower'],
+					tips['Micro blower'],
+					tips['Micro blower'],
+					tips['Micro blower'],
 				],[
 					tips['Soldering tip'],
-					tips['Screw adapter'],
-					tips['Micro blower'],
+					tips['Soldering tip'],
+					tips['Soldering tip'],
+					tips['Soldering tip'],
+				],[
+					tips['Container'],
+					tips['Container'],
+					tips['Container'],
 					tips['Container'],
 				],
 			],
