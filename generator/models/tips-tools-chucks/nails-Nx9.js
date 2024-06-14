@@ -19,6 +19,7 @@ const defaults = [
 
 const nailBlocks = widthBlockMultipliers.map(multiplier => ({
 	active,
+	path: 'tips-tools-chucks',
 	name: `Nail blocks ${modulesQtt * multiplier}x${modulesQtt}`,
 	params: {
 		width: 50 * multiplier,

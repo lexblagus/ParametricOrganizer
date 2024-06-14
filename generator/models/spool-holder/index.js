@@ -8,6 +8,7 @@ const active = false;
 
 module.exports = [{
 	active,
+	path: 'spool-holder',
 	name: `Spool holder positive`,
 	params: {
 		width: size,
@@ -26,6 +27,7 @@ module.exports = [{
 	},
 },{
 	active,
+	path: 'spool-holder',
 	name: `Spool holder negative`,
 	params: {
 		width: size,

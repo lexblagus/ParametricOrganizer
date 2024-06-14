@@ -9,6 +9,7 @@ const drawers = [
 	// —————————————————————————————————————————————————————————————————————————————
 	{
 		active,
+		path: 'drawer-organizers',
 		name: 'Drawer organizer 1x1A',
 		params: {
 			width: base * 1,
@@ -27,6 +28,7 @@ const drawers = [
 		}
 	},{
 		active,
+		path: 'drawer-organizers',
 		name: 'Drawer organizer 1x2A',
 		params: {
 			width: base * 1,
@@ -45,6 +47,7 @@ const drawers = [
 		},
 	},{
 		active,
+		path: 'drawer-organizers',
 		name: 'Drawer organizer 1x3A',
 		params: {
 			width: base * 1,
@@ -63,6 +66,7 @@ const drawers = [
 		},
 	},{
 		active,
+		path: 'drawer-organizers',
 		name: 'Drawer organizer 1x4A',
 		params: {
 			width: base * 1,
@@ -86,6 +90,7 @@ const drawers = [
 	// —————————————————————————————————————————————————————————————————————————————
 	{
 		active,
+		path: 'drawer-organizers',
 		name: 'Drawer organizer 1x2B',
 		params: {
 			width: base * 1,
@@ -104,6 +109,7 @@ const drawers = [
 		},
 	},{
 		active,
+		path: 'drawer-organizers',
 		name: 'Drawer organizer 1x3B',
 		params: {
 			width: base * 1,
@@ -122,6 +128,7 @@ const drawers = [
 		},
 	},{
 		active,
+		path: 'drawer-organizers',
 		name: 'Drawer organizer 1x3C',
 		params: {
 			width: base * 1,
@@ -140,6 +147,7 @@ const drawers = [
 		},
 	},{
 		active,
+		path: 'drawer-organizers',
 		name: 'Drawer organizer 1x4B',
 		params: {
 			width: base * 1,
@@ -158,6 +166,7 @@ const drawers = [
 		},
 	},{
 		active,
+		path: 'drawer-organizers',
 		name: 'Drawer organizer 1x4C',
 		params: {
 			width: base * 1,
@@ -176,6 +185,7 @@ const drawers = [
 		},
 	},{
 		active,
+		path: 'drawer-organizers',
 		name: 'Drawer organizer 1x4D',
 		params: {
 			width: base * 1,
@@ -198,6 +208,7 @@ const drawers = [
 	// —————————————————————————————————————————————————————————————————————————————
 	{
 		active,
+		path: 'drawer-organizers',
 		name: 'Drawer organizer 2x2A',
 		params: {
 			width: base * 2,
@@ -220,6 +231,7 @@ const drawers = [
 	// —————————————————————————————————————————————————————————————————————————————
 	{
 		active,
+		path: 'drawer-organizers',
 		name: 'Drawer organizer 2x2B',
 		params: {
 			width: base * 2,

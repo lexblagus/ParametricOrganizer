@@ -36,6 +36,7 @@ const cornerHoc = [
 module.exports = [
 	{
 		active: false,
+		path: 'boxes',
 		name: 'Box for chess pieces',
 		params: {
 			width:  boxDimensions[0],
@@ -98,6 +99,7 @@ module.exports = [
 	},
 	{
 		active: false,
+		path: 'boxes',
 		name: 'Box for chess pieces cover',
 		params: {
 			width: boxDimensions[0] + ( coverGap * 2 ) + ( thickness * 2 ),

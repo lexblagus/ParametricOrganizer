@@ -37,6 +37,7 @@ Object.keys(shanks).map(size => {
 
 const holderBlock = {
 	active,
+	path: 'bits-tips-drills-tools',
 	name: 'Dremel bits large 6x6',
 	params: {
 		width: 50,

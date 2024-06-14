@@ -29,6 +29,7 @@ const tipDiameterConfig = tipDiameters.map(tipDiameter => ([
 module.exports = [
 	{
 		active,
+		path: 'tips-tools-chucks',
 		name: 'Oscilating tool tips',
 		params: {
 			width,

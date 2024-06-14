@@ -43,6 +43,7 @@ const holders = shanks.map(d => ([
 
 const drillsConcreteOrganizer = {
 	active,
+	path: 'bits-tips-drills-tools',
 	name: 'Concrete drills',
 	params: {
 		width: 50,

@@ -12,6 +12,7 @@ const active = false;
 module.exports = [
 	{
 		active,
+		path: 'tips-tools-chucks',
 		name: 'SMD soldering station tips positive',
 		params: {
 			width: 50,
@@ -31,6 +32,7 @@ module.exports = [
 	},
 	{
 		active,
+		path: 'tips-tools-chucks',
 		name: 'SMD soldering station tips negative',
 		params: {
 			width: 50,

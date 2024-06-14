@@ -138,6 +138,7 @@ const tips = {
 module.exports = [
 	{
 		active,
+		path: 'tips-tools-chucks',
 		name: 'Dremel Versatip main head',
 		params: {
 			width,
@@ -160,6 +161,7 @@ module.exports = [
 	},
 	{
 		active,
+		path: 'tips-tools-chucks',
 		name: 'Dremel Versatip big blower attachments',
 		params: {
 			width,
@@ -182,6 +184,7 @@ module.exports = [
 	},
 	{
 		active,
+		path: 'tips-tools-chucks',
 		name: 'Dremel Versatip scratcher attachments',
 		params: {
 			width,
@@ -204,6 +207,7 @@ module.exports = [
 	},
 	{
 		active,
+		path: 'tips-tools-chucks',
 		name: 'Dremel Versa tips 1',
 		params: {
 			width,
@@ -239,6 +243,7 @@ module.exports = [
 	},
 	{
 		active,
+		path: 'tips-tools-chucks',
 		name: 'Dremel Versa tips 2',
 		params: {
 			width,

@@ -98,6 +98,7 @@ const tips = {
 module.exports = [
 	{
 		active,
+		path: 'tips-tools-chucks',
 		name: 'Dremel Versa tips',
 		params: {
 			width: 50,

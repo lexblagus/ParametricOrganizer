@@ -37,6 +37,7 @@ Object.keys(shanks).map(size => {
 
 const holderBlocks = widthBlockMultipliers.map(multiplier => ({
 	active,
+	path: 'bits-tips-drills-tools',
 	name: `Dremel bits large ${modulesQtt * multiplier}x${modulesQtt}`,
 	params: {
 		width: 50 * multiplier,

@@ -55,6 +55,7 @@ const moduleConfig = [ moduleRow ]; // [ moduleRow.map(mdl => mdl) ];
 
 const sizeSamplesBlock = {
 	active,
+	path: 'size-samples',
 	name: `Size sample 1xN block 01 for nails block 0p1-2mm`,
 	params: {
 		width: moduleSize,

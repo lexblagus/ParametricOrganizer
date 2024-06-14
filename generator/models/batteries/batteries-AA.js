@@ -9,6 +9,7 @@ const active = false;
 module.exports = [
 	{
 		active,
+		path: 'batteries',
 		name: 'Batteries AA',
 		params: {
 			width: (moduleQtt[0] * size) + ((moduleQtt[0] + 1) * spacing),

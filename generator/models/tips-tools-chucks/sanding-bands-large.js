@@ -21,6 +21,7 @@ const defaults = [
 
 const sandingBands = widthBlockMultipliers.map(multiplier => ({
 	active,
+	path: 'tips-tools-chucks',
 	name: `Sanding Bands large ${modulesQtt * multiplier}x${modulesQtt}`,
 	params: {
 		width: 50 * multiplier,

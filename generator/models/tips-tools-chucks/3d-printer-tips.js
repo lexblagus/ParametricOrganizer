@@ -8,6 +8,7 @@ const active = false;
 module.exports = [
 	{
 		active,
+		path: 'tips-tools-chucks',
 		name: '3D printer tips',
 		params: {
 			width: 50,

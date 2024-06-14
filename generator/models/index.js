@@ -1,4 +1,3 @@
-const newModel = require('./new');
 const development = require('./development');
 const sizeSamples = require('./size-samples');
 const drawerOrganizers = require('./drawer-organizers');
@@ -11,7 +10,6 @@ const batteries = require('./batteries');
 const makeup = require('./makeup');
 
 module.exports = [
-	...newModel,
 	...development,
 	...sizeSamples,
 	...boxes,

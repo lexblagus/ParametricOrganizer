@@ -7,6 +7,7 @@ const active = false;
 module.exports = [
 	{
 		active,
+		path: 'bits-tips-drills-tools',
 		name: 'Hexagonal bits organizer 1x1',
 		params: {
 			width: 50,
@@ -26,6 +27,7 @@ module.exports = [
 	},
 	{
 		active,
+		path: 'bits-tips-drills-tools',
 		name: 'Hexagonal bits organizer 1x2',
 		params: {
 			width: 2 * 50,

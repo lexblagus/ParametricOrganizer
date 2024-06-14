@@ -7,7 +7,6 @@ const floorHeight = 1;
 
 const sizeSamples = [
 	{
-		active,
 		name: `${namePrefix} piece 01 SMDSS tips positive 19-21p4mm`,
 		height,
 		moduleSize: 30,
@@ -16,7 +15,6 @@ const sizeSamples = [
 		increaseSize: 0.1,
 	},
 	{
-		active,
 		name: `${namePrefix} piece 02 Dremel sanding bands 12p7 (10p5mm to 12p9mm)`,
 		height,
 		moduleSize: 15,
@@ -25,7 +23,6 @@ const sizeSamples = [
 		increaseSize: 0.1,
 	},
 	{
-		active,
 		name: `${namePrefix} piece 03 Dremel sanding bands 6p4 (5p5mm to 7p9mm)`,
 		height,
 		moduleSize: 10,
@@ -36,8 +33,9 @@ const sizeSamples = [
 ];
 
 
-module.exports = sizeSamples.map(sizeSample => sizeSample.active && ({
-	active: sizeSample.active,
+module.exports = sizeSamples.map(sizeSample => ({
+	active,
+	path: 'size-samples',
 	name: sizeSample.name,
 	params: {
 		width: sizeSample.moduleSize * sizeSample.moduleQtt[0],

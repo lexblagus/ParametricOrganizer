@@ -5,7 +5,6 @@ const height = 25;
 
 const sizeSamples = [
 	{
-		active,
 		name: `${namePrefix} A 0.1-10mm`,
 		height,
 		moduleSize: 12.5,
@@ -14,7 +13,6 @@ const sizeSamples = [
 		increaseSize: 0.1,
 	},
 	{
-		active,
 		name: `${namePrefix} B 10.1-12.5mm`,
 		height,
 		moduleSize: 15,
@@ -23,7 +21,6 @@ const sizeSamples = [
 		increaseSize: 0.1,
 	},
 	{
-		active,
 		name: `${namePrefix} C 12.6-15mm`,
 		height,
 		moduleSize: 17.5,
@@ -32,7 +29,6 @@ const sizeSamples = [
 		increaseSize: 0.1,
 	},
 	{
-		active,
 		name: `${namePrefix} D 15.1-17.5mm`,
 		height,
 		moduleSize: 20.0,
@@ -41,7 +37,6 @@ const sizeSamples = [
 		increaseSize: 0.1,
 	},
 	{
-		active,
 		name: `${namePrefix} E 17.6-20mm`,
 		height,
 		moduleSize: 22.5,
@@ -50,7 +45,6 @@ const sizeSamples = [
 		increaseSize: 0.1,
 	},
 	{
-		active,
 		name: `${namePrefix} F 20.10-22.5mm`,
 		height,
 		moduleSize: 25,
@@ -59,7 +53,6 @@ const sizeSamples = [
 		increaseSize: 0.1,
 	},
 	{
-		active,
 		name: `${namePrefix} G 22.6-25mm`,
 		height,
 		moduleSize: 27.5,
@@ -68,7 +61,6 @@ const sizeSamples = [
 		increaseSize: 0.1,
 	},
 	{
-		active,
 		name: `${namePrefix} H 25.1-27.5mm`,
 		height,
 		moduleSize: 30,
@@ -77,7 +69,6 @@ const sizeSamples = [
 		increaseSize: 0.1,
 	},
 	{
-		active,
 		name: `${namePrefix} I 27.6-30mm`,
 		height,
 		moduleSize: 32.5,
@@ -88,8 +79,9 @@ const sizeSamples = [
 ];
 
 
-module.exports = sizeSamples.map(sizeSample => sizeSample.active && ({
-	active: sizeSample.active,
+module.exports = sizeSamples.map(sizeSample => ({
+	active,
+	path: 'size-samples',
 	name: sizeSample.name,
 	params: {
 		width: sizeSample.moduleSize * sizeSample.moduleQtt[0],

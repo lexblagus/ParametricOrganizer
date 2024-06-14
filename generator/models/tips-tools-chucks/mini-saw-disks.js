@@ -25,6 +25,7 @@ sawDiameterConfig = sawDiameters.map(sawDiameter => ([
 module.exports = [
 	{
 		active,
+		path: 'tips-tools-chucks',
 		name: 'Mini saw discs',
 		params: {
 			width: 50,

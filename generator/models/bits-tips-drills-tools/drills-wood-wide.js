@@ -62,6 +62,7 @@ const holders = {
 
 const drillsWoodWideOrganizer = {
 	active,
+	path: 'bits-tips-drills-tools',
 	name: 'Drills wood hex',
 	params: {
 		width: 50,

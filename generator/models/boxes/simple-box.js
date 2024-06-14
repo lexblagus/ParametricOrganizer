@@ -9,6 +9,7 @@ const active = false;
 module.exports = [
 	{
 		active,
+		path: 'boxes',
 		name: 'Simple box',
 		params: {
 			width: dimensions[0],
@@ -28,6 +29,7 @@ module.exports = [
 	},
 	{
 		active: active && capStyle === 'chanfer',
+		path: 'boxes',
 		name: 'Simple box chanfer cap',
 		params: {
 			width: dimensions[0],
@@ -47,6 +49,7 @@ module.exports = [
 	},
 	{
 		active: active && capStyle === 'cover',
+		path: 'boxes',
 		name: 'Simple box cover cap',
 		params: {
 			width: dimensions[0] + ( gap * 2 ) + ( thickness * 2 ),

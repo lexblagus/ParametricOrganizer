@@ -40,6 +40,7 @@ const coverHocHeight = 0 - coverHeight + floorHeight;
 module.exports = [
 	{
 		active,
+		path: 'boxes',
 		name: 'SD cards grid',
 		params: {
 			width,
@@ -59,6 +60,7 @@ module.exports = [
 	},
 	{
 		active,
+		path: 'boxes',
 		name: 'SD cards box',
 		params: {
 			width: boxWidth,
@@ -78,6 +80,7 @@ module.exports = [
 	},
 	{
 		active,
+		path: 'boxes',
 		name: 'SD cards cover',
 		params: {
 			width: coverWidth,

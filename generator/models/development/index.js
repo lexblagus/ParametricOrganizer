@@ -4,6 +4,7 @@ const active = false;
 const development = [
 	{
 		active,
+		path: 'development',
 		name: 'Development model 1 simple box',
 		params: {
 			width: 100,
@@ -16,6 +17,7 @@ const development = [
 	},
 	{
 		active,
+		path: 'development',
 		name: 'Development model 2 box 2x2 one shallow',
 		params: {
 			width: 100,
@@ -29,6 +31,7 @@ const development = [
 	},
 	{
 		active,
+		path: 'development',
 		name: 'Development model 3 default hole one chanfer',
 		params: {
 			width: 75,
@@ -42,6 +45,7 @@ const development = [
 	},
 	{
 		active,
+		path: 'development',
 		name: 'Development model 4 two consecutve holes',
 		params: {
 			width: 100,
@@ -71,6 +75,7 @@ const development = [
 	},
 	{
 		active,
+		path: 'development',
 		name: 'Development model 5 examples',
 		params: {
 			width: 100,
@@ -150,6 +155,7 @@ const development = [
 	},
 	{
 		active,
+		path: 'development',
 		name: 'Development model 6 dynamically generated faces and rotations',
 		params: {
 			width: 200,

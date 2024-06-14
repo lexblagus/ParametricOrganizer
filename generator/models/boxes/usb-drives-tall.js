@@ -40,6 +40,7 @@ const coverHocHeight = 0 - coverHeight + floorHeight;
 module.exports = [
 	{
 		active,
+		path: 'boxes',
 		name: 'USB drives tall grid',
 		params: {
 			width,
@@ -59,6 +60,7 @@ module.exports = [
 	},
 	{
 		active,
+		path: 'boxes',
 		name: 'USB drives tall box',
 		params: {
 			width: boxWidth,
@@ -78,6 +80,7 @@ module.exports = [
 	},
 	{
 		active,
+		path: 'boxes',
 		name: 'USB drives tall cover',
 		params: {
 			width: coverWidth,

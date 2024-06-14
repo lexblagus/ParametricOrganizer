@@ -37,6 +37,7 @@ const chucksConfiguration = {
 
 module.exports = [{
 	active,
+	path: 'tips-tools-chucks',
 	name: 'Dremel chucks',
 	params: {
 		width: 50,

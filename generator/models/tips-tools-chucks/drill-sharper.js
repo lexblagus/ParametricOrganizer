@@ -19,6 +19,7 @@ const config = [
 
 module.exports = [{
 	active,
+	path: 'tips-tools-chucks',
 	name: 'Drill sharper',
 	params: {
 		width: 50 * 3,

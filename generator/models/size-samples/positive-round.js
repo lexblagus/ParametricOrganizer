@@ -88,8 +88,9 @@ const sizeSamples = [
 ];
 
 
-module.exports = sizeSamples.map(sizeSample => sizeSample.active && ({
+module.exports = sizeSamples.map(sizeSample => ({
 	active: sizeSample.active,
+	path: 'size-samples',
 	name: sizeSample.name,
 	params: {
 		width: sizeSample.moduleSize * sizeSample.moduleQtt[0],

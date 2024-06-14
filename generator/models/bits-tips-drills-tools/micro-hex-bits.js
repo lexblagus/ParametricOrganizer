@@ -8,6 +8,7 @@ const active = false;
 module.exports = [
 	{
 		active,
+		path: 'bits-tips-drills-tools',
 		name: 'Micro hexagonal bits organizer default',
 		params: {
 			width: 50,
@@ -27,6 +28,7 @@ module.exports = [
 	},
 	{
 		active,
+		path: 'bits-tips-drills-tools',
 		name: 'Micro hexagonal bits organizer with extender',
 		params: {
 			width: 50,

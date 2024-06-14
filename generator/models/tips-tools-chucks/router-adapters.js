@@ -16,6 +16,7 @@ const adapterBig = [
 
 module.exports = [{
 	active,
+	path: 'tips-tools-chucks',
 	name: 'Router adapters',
 	params: {
 		width: 50,

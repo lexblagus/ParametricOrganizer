@@ -8,6 +8,7 @@ const hocHeightIncrease = 2.5;
 
 module.exports = [{
 	active: false,
+	path: 'ring-hanger',
 	name: `Ring Hanger`,
 	params: {
 		width: baseSize * moduleQtt[0],

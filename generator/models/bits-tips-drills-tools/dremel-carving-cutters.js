@@ -37,6 +37,7 @@ Object.keys(shanks).map(size => {
 
 const bitHolder = {
 	active,
+	path: 'bits-tips-drills-tools',
 	name: 'Dremel carving cutters',
 	params: {
 		width: 50,
