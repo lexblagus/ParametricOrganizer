@@ -1,7 +1,7 @@
-const active = true;
+const active = false;
 
 const thickness = 1.5;
-const coverGap = 0.5;
+const lidGap = 0.5;
 const pieceSpacing = 1;
 const pieceSize = [
 	20,
@@ -102,16 +102,16 @@ module.exports = [
 	{
 		active: false,
 		path: 'boxes',
-		name: 'Box for chess pieces cover',
+		name: 'Box for chess pieces lid',
 		params: {
-			width: boxDimensions[0] + ( coverGap * 2 ) + ( thickness * 2 ),
-			length: boxDimensions[1] + ( coverGap * 2 ) + ( thickness * 2 ),
+			width: boxDimensions[0] + ( lidGap * 2 ) + ( thickness * 2 ),
+			length: boxDimensions[1] + ( lidGap * 2 ) + ( thickness * 2 ),
 			height: pieceSize[2] + thickness,
 			floorHeight: thickness,
 			moduleQtt: [1, 1],
 			hoc: [
-				boxDimensions[0] + ( coverGap * 2 ),
-				boxDimensions[1] + ( coverGap * 2 ),
+				boxDimensions[0] + ( lidGap * 2 ),
+				boxDimensions[1] + ( lidGap * 2 ),
 				0 - pieceSize[2] - pieceSpacing,
 				0,
 				4,

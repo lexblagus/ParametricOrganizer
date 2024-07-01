@@ -1,4 +1,4 @@
-const active = true;
+const active = false;
 const path = 'boxes/seamless-lid';
 
 /*

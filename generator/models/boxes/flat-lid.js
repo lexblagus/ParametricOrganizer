@@ -1,4 +1,4 @@
-const active = true;
+const active = false;
 
 const dimensions = [70, 120, 50];
 const lidHeight = 2.5;

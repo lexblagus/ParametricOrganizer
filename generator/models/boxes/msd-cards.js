@@ -1,4 +1,4 @@
-const active = true;
+const active = false;
 const path = 'boxes/msd-cards';
 const namePrefix = 'Micro SD cards';
 
@@ -7,11 +7,11 @@ const visibleHeight = msdcDimensions[1] / 2; // 12.5; // naked area
 const moduleQtt = [4, 20]; // cols, rows
 const floorHeight = 1; // floor thickness
 const wallThickness = floorHeight;
-const coverHeight = 10;
+const lidHeight = 10;
 const clearanceGrid = 0.4; // additional spacing for machine tolerance
 const clearanceFloor = 1.5; // aditional height
 const clearanceBox = 0.25;
-const clearanceCover = 0.10;
+const clearanceLid = 0.10;
 const spacingXBetween = floorHeight; // 1.45 * 2;
 const spacingYBetween = floorHeight + 0.076; // 2.5;
 
@@ -34,11 +34,11 @@ const boxHocWidth = width + (clearanceBox * 2);
 const boxHocLength = length + (clearanceBox * 2);
 const boxHocHeight = 0 - msdcDimensions[1] + clearanceFloor;
 
-const coverWidth = boxWidth + (wallThickness * 2) + (clearanceCover * 2);
-const coverLength = boxLength + (wallThickness * 2) + (clearanceCover * 2);
-const coverHocWidth = boxWidth + (clearanceCover * 2);
-const coverHocLength = boxLength + (clearanceCover * 2);
-const coverHocHeight = 0 - coverHeight + floorHeight;
+const lidWidth = boxWidth + (wallThickness * 2) + (clearanceLid * 2);
+const lidLength = boxLength + (wallThickness * 2) + (clearanceLid * 2);
+const lidHocWidth = boxWidth + (clearanceLid * 2);
+const lidHocLength = boxLength + (clearanceLid * 2);
+const lidHocHeight = 0 - lidHeight + floorHeight;
 
 module.exports = [
 	{
@@ -84,17 +84,17 @@ module.exports = [
 	{
 		active,
 		path,
-		name: `${namePrefix} cover`,
+		name: `${namePrefix} lid`,
 		params: {
-			width: coverWidth,
-			length: coverLength,
-			height: coverHeight,
+			width: lidWidth,
+			length: lidLength,
+			height: lidHeight,
 			floorHeight,
 			moduleQtt: [1, 1],
 			hoc: [
-				coverHocWidth,
-				coverHocLength,
-				coverHocHeight,
+				lidHocWidth,
+				lidHocLength,
+				lidHocHeight,
 				0,
 				4,
 				0
