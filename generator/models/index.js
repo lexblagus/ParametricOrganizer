@@ -7,7 +7,6 @@ const boxes = require('./boxes');
 const ringHanger = require('./ring-hanger');
 const spoolHolder = require('./spool-holder');
 const batteries = require('./batteries');
-const makeup = require('./makeup');
 
 module.exports = [
 	...development,
@@ -19,5 +18,4 @@ module.exports = [
 	...ringHanger,
 	...spoolHolder,
 	...batteries,
-	...makeup,
 ];

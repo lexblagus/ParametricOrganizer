@@ -1,0 +1,106 @@
+const active = true;
+/*
+// for small HDs
+const thickness = 2;
+const gap = 0.2;
+const dimensions = {
+	width: 70,
+	length: 120,
+	height: 100,
+	lidHeight: 20,
+};
+
+
+// for code development
+const thickness = 5;
+const gap = 1;
+const dimensions = {
+	width: 50,
+	length: 40,
+	height: 30,
+	lidHeight: 12.5,
+};
+
+*/
+// for print test
+const thickness = 1;
+const gap = 0.2;
+const dimensions = {
+	width: 10,
+	length: 15,
+	height: 5,
+	lidHeight: 2,
+};
+
+const path = 'boxes/seamless-lid';
+
+const outterHeight = dimensions.height - dimensions.lidHeight;
+const outter = {
+	width: dimensions.width,
+	length: dimensions.length,
+	height: outterHeight - (gap /2),
+	floorHeight: thickness / 2,
+	moduleQtt: [1, 1],
+	hoc: [
+		dimensions.width - (thickness * 2),
+		dimensions.length - (thickness * 2),
+		0 - outterHeight + (thickness / 2),
+		0,
+		4,
+		0
+	],
+};
+const lid = {
+	width: dimensions.width,
+	length: dimensions.length,
+	height: dimensions.lidHeight - (gap /2),
+	floorHeight: thickness,
+	moduleQtt: [1, 1],
+	hoc: [
+		dimensions.width - (thickness * 2),
+		dimensions.length - (thickness * 2),
+		0 - dimensions.lidHeight + thickness,
+		0,
+		4,
+		0
+	],
+};
+const innerWidth = outter.hoc[0] - (gap * 2);
+const innerLength = outter.hoc[1] - (gap * 2);
+const innerHeight = dimensions.height - outter.floorHeight - lid.floorHeight
+const inner = {
+	width: innerWidth,
+	length: innerLength,
+	height: innerHeight - (gap * 2),
+	floorHeight: outter.floorHeight,
+	moduleQtt: [1, 1],
+	hoc: [
+		innerWidth - (thickness * 2),
+		innerLength - (thickness * 2),
+		0 - innerHeight - outter.floorHeight,
+		0,
+		4,
+		0
+	],
+};
+
+module.exports = [
+	{
+		active,
+		path,
+		name: 'Outter',
+		params: outter,
+	},
+	{
+		active,
+		path,
+		name: 'Inner',
+		params: inner,
+	},
+	{
+		active,
+		path,
+		name: 'Lid',
+		params: lid,
+	},
+];

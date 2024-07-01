@@ -18,9 +18,13 @@ let json = {
 
 if( !dryRun && clearDir ){
 	// try to create
-	try{ execSync(`mkdir ${dirOutput}`); } catch (e){}
+	const mkdir = `mkdir "${dirOutput}"`;
+	console.log(`$ ${mkdir}`);
+	try{ execSync(mkdir); } catch (e){}
 	// erase exiting contents
-	try{ execSync(`rm -r ${dirOutput}/*`); } catch (e){}
+	const rm = `rm -rf ${dirOutput}/*`
+	console.log(`$ ${rm}`);
+	try{ execSync(rm); } catch (e){}
 }
 
 
@@ -42,7 +46,7 @@ templateModels.map(templateModel => {
 		console.log(`outputFilename = ${JSON.stringify(outputFilename)}`);
 
 		if( !dryRun && templateModel.path ){
-			try{ execSync(`mkdir -p ${dirOutput}/${templateModel.path}`); } catch (e){}
+			try{ execSync(`mkdir -p "${dirOutput}/${templateModel.path}"`); } catch (e){}
 		}
 
 		let execThis = '';
@@ -54,7 +58,7 @@ templateModels.map(templateModel => {
 		});
 		execThis += `"${inputFilename}" `;
 		
-		console.log(`execThis = ${execThis}`);
+		console.log(`$ ${execThis}`);
 		if( !dryRun ){
 			execSync(execThis);
 		}

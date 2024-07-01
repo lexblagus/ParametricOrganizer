@@ -15,7 +15,6 @@ const width = 85;
 const length = 50;
 const height = 25;
 const divisions = [3, 1];
-*/
 
 // Bin 0 divider (individual)
 const wall = 1.5;
@@ -23,11 +22,24 @@ const width = 85 / 4;
 const length = 50;
 const height = 25;
 const divisions = [1, 1];
+const path = 'makeup/bin-dividers',
+const name = 'Bin 1 4x1 individual',
+
+*/
+
+// Hard drive case
+const wall = 2;
+const width = 75 + (wall * 2);
+const length = 120;
+const height = 50;
+const divisions = [1, 1];
+const path = 'boxes';
+const name = 'Simple';
 
 module.exports = [{
 	active,
-	path: `makeup/bin-dividers`,
-	name: `Bin 1 4x1 individual`,
+	path,
+	name,
 	params: {
 		width,
 		length,

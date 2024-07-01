@@ -1,5 +1,7 @@
 const active = false;
 
+const path = 'boxes/large-set';
+
 const wall = 2;
 
 const divisions = {
@@ -63,9 +65,9 @@ const divisions = {
 
 const heights = [
 	25,
-	50,
+	/* 50,
 	75,
-	100
+	100 */
 ];
 
 const variations = [
@@ -136,8 +138,8 @@ module.exports = variations.map(
 		height => variation.divisions.map(
 			division => ({
 				active: variation.active,
-				path: `makeup/${variation.width}×${variation.length}×${height}`,
-				name: `Makeup ${variation.width}×${variation.length}×${height} ${division[0]}×${division[1]}`,
+				path: `${path}/${variation.width}×${variation.length}×${height}`,
+				name: `${variation.width}×${variation.length}×${height} ${division[0]}×${division[1]}`,
 				params: {
 					width: variation.width,
 					length: variation.length,

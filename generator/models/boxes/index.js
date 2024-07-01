@@ -1,4 +1,8 @@
-const simpleBox = require('./simple-box');
+const simple = require('./simple');
+const flatLid = require('./flat-lid');
+const simpleLid = require('./simple-lid');
+const seamlessLid = require('./seamless-lid');
+const largeSet = require('./large-set');
 const MSDCards = require('./msd-cards');
 const SDCards = require('./sd-cards');
 const USBDrivesTall = require('./usb-drives-tall');
@@ -7,7 +11,11 @@ const miniRemoteControlBox = require('./mini-remote-control-box');
 const chessSetBox = require('./chess-set-box');
 
 module.exports = [
-	...simpleBox,
+	...simple,
+	...flatLid,
+	...simpleLid,
+	...seamlessLid,
+	...largeSet,
 	...MSDCards,
 	...SDCards,
 	...USBDrivesTall,
