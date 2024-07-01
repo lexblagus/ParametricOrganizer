@@ -1,3 +1,5 @@
+const active = true;
+
 const thickness = 1.5;
 const coverGap = 0.5;
 const pieceSpacing = 1;
@@ -35,7 +37,7 @@ const cornerHoc = [
 
 module.exports = [
 	{
-		active: false,
+		active,
 		path: 'boxes',
 		name: 'Box for chess pieces',
 		params: {

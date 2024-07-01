@@ -1,10 +1,10 @@
 const active = true;
-const path = 'boxes/usb-drives-short';
-const namePrefix = 'USB drives short';
+const path = 'boxes/internal-ssds';
+const namePrefix = 'Internal SSD';
 
-const msdcDimensions = [12.15, 35, 4.55]; // width, height, thickness
-const visibleHeight = msdcDimensions[1] - 10; // naked area
-const moduleQtt = [3, 7]; // cols, rows
+const msdcDimensions = [22.5, 80, 5]; // width, height, thickness
+const visibleHeight = msdcDimensions[1] - 20; // naked area
+const moduleQtt = [2, 5]; // cols, rows
 const floorHeight = 1; // floor thickness
 const wallThickness = floorHeight;
 const coverHeight = 15;
@@ -14,7 +14,7 @@ const clearanceBox = 0.25;
 const clearanceCover = 0.10;
 const spacingXBetween = 4.25;
 const spacingYBetween = 2.5;
-
+ 
 
 const width = 
 	(moduleQtt[0] * (msdcDimensions[0] + clearanceGrid)) +

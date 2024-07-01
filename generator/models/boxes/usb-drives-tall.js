@@ -1,3 +1,7 @@
+const active = true;
+const path = 'boxes/usb-drives-tall';
+const namePrefix = 'USB drives tall';
+
 const msdcDimensions = [12.15, 75, 4.55]; // width, height, thickness
 const visibleHeight = msdcDimensions[1] - 10; // naked area
 const moduleQtt = [3, 7]; // cols, rows
@@ -10,7 +14,6 @@ const clearanceBox = 0.25;
 const clearanceCover = 0.10;
 const spacingXBetween = 4.25;
 const spacingYBetween = 2.5;
-const active = false;
 
 
 const width = 
@@ -40,8 +43,8 @@ const coverHocHeight = 0 - coverHeight + floorHeight;
 module.exports = [
 	{
 		active,
-		path: 'boxes',
-		name: 'USB drives tall grid',
+		path,
+		name: `${namePrefix} grid`,
 		params: {
 			width,
 			length,
@@ -60,8 +63,8 @@ module.exports = [
 	},
 	{
 		active,
-		path: 'boxes',
-		name: 'USB drives tall box',
+		path,
+		name: `${namePrefix} box`,
 		params: {
 			width: boxWidth,
 			length: boxLength,
@@ -80,8 +83,8 @@ module.exports = [
 	},
 	{
 		active,
-		path: 'boxes',
-		name: 'USB drives tall cover',
+		path,
+		name: `${namePrefix} cover`,
 		params: {
 			width: coverWidth,
 			length: coverLength,

@@ -1,16 +1,7 @@
 const active = true;
+const path = 'boxes/seamless-lid';
+
 /*
-// for small HDs
-const thickness = 2;
-const gap = 0.2;
-const dimensions = {
-	width: 70,
-	length: 120,
-	height: 100,
-	lidHeight: 20,
-};
-
-
 // for code development
 const thickness = 5;
 const gap = 1;
@@ -20,8 +11,8 @@ const dimensions = {
 	height: 30,
 	lidHeight: 12.5,
 };
+const lidOverflow = 0;
 
-*/
 // for print test
 const thickness = 1;
 const gap = 0.2;
@@ -31,8 +22,30 @@ const dimensions = {
 	height: 5,
 	lidHeight: 2,
 };
+const lidOverflow = 0;
 
-const path = 'boxes/seamless-lid';
+// for small HDs
+const thickness = 2;
+const gap = 0.2;
+const dimensions = {
+	width: 70 + 8.4,
+	length: 120 + 8.4,
+	height: 50 + 1,
+	lidHeight: 10,
+};
+const lidOverflow = 50 + 1;
+*/
+
+// for external HDs
+const thickness = 2;
+const gap = 0.2;
+const dimensions = {
+	width: 85 + 8.4,
+	length: 60 + 8.4,
+	height: 50 + 1,
+	lidHeight: 10,
+};
+const lidOverflow = 50 + 1;
 
 const outterHeight = dimensions.height - dimensions.lidHeight;
 const outter = {
@@ -53,13 +66,13 @@ const outter = {
 const lid = {
 	width: dimensions.width,
 	length: dimensions.length,
-	height: dimensions.lidHeight - (gap /2),
+	height: dimensions.lidHeight - (gap /2) + lidOverflow,
 	floorHeight: thickness,
 	moduleQtt: [1, 1],
 	hoc: [
 		dimensions.width - (thickness * 2),
 		dimensions.length - (thickness * 2),
-		0 - dimensions.lidHeight + thickness,
+		0 - dimensions.lidHeight + thickness - lidOverflow,
 		0,
 		4,
 		0
@@ -83,6 +96,13 @@ const inner = {
 		0
 	],
 };
+
+const innerDimmensions = {
+	width: inner.hoc[0],
+	length: inner.hoc[1],
+	height: inner.hoc[2] * (-1),
+};
+console.log(`${path} inner dimensions = `, JSON.stringify(innerDimmensions, null, 2));
 
 module.exports = [
 	{

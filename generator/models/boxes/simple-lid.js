@@ -1,8 +1,9 @@
+const active = true;
+
 const dimensions = [70, 120, 100];
 const lidHeight = 20;
 const thickness = 2;
 const gap = 0.2;
-const active = false;
 const path = 'boxes/simple-lid';
 
 module.exports = [

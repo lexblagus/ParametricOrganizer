@@ -1,4 +1,5 @@
-const capHeight = 5;
+const active = true;
+
 const thickness = 1.5;
 const gap = 0.5;
 const dimensions = [
@@ -10,7 +11,7 @@ const dimensions = [
 
 module.exports = [
 	{
-		active: false,
+		active,
 		path: 'boxes',
 		name: 'Mini remote control box',
 		params: {

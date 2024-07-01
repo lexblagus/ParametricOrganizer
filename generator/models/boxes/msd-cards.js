@@ -1,3 +1,7 @@
+const active = true;
+const path = 'boxes/msd-cards';
+const namePrefix = 'Micro SD cards';
+
 const msdcDimensions = [11, 15, 1]; // width, height, thickness
 const visibleHeight = msdcDimensions[1] / 2; // 12.5; // naked area
 const moduleQtt = [4, 20]; // cols, rows
@@ -10,7 +14,6 @@ const clearanceBox = 0.25;
 const clearanceCover = 0.10;
 const spacingXBetween = floorHeight; // 1.45 * 2;
 const spacingYBetween = floorHeight + 0.076; // 2.5;
-const active = false;
 
 
 const width = 
@@ -40,8 +43,8 @@ const coverHocHeight = 0 - coverHeight + floorHeight;
 module.exports = [
 	{
 		active,
-		path: 'boxes',
-		name: 'Micro SD cards grid',
+		path,
+		name: `${namePrefix} grid`,
 		params: {
 			width,
 			length,
@@ -60,8 +63,8 @@ module.exports = [
 	},
 	{
 		active,
-		path: 'boxes',
-		name: 'Micro SD cards box',
+		path,
+		name: `${namePrefix} box`,
 		params: {
 			width: boxWidth,
 			length: boxLength,
@@ -80,8 +83,8 @@ module.exports = [
 	},
 	{
 		active,
-		path: 'boxes',
-		name: 'Micro SD cards cover',
+		path,
+		name: `${namePrefix} cover`,
 		params: {
 			width: coverWidth,
 			length: coverLength,

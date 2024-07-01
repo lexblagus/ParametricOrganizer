@@ -1,5 +1,4 @@
 const active = false;
-
 const path = 'boxes/large-set';
 
 const wall = 2;

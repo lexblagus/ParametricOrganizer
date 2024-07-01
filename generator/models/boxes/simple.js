@@ -1,4 +1,4 @@
-const active = false;
+const active = true;
 
 /*
 // Microwave lamp mold
@@ -34,7 +34,7 @@ const length = 120;
 const height = 50;
 const divisions = [1, 1];
 const path = 'boxes';
-const name = 'Simple';
+const name = 'Simple box';
 
 module.exports = [{
 	active,

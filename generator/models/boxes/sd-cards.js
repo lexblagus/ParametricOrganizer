@@ -1,3 +1,7 @@
+const active = true;
+const path = 'boxes/sd-cards';
+const namePrefix = 'SD cards';
+
 const msdcDimensions = [24, 32, 2]; // width, height, thickness
 const visibleHeight = msdcDimensions[1] / 2; // naked area
 const moduleQtt = [2, 15]; // cols, rows
@@ -10,7 +14,6 @@ const clearanceBox = 0.25;
 const clearanceCover = 0.10;
 const spacingXBetween = floorHeight + 0.065; // 1.45 * 2;
 const spacingYBetween = floorHeight; // 2.5;
-const active = false;
 
 
 const width = 
@@ -40,8 +43,8 @@ const coverHocHeight = 0 - coverHeight + floorHeight;
 module.exports = [
 	{
 		active,
-		path: 'boxes',
-		name: 'SD cards grid',
+		path,
+		name: `${namePrefix} grid`,
 		params: {
 			width,
 			length,
@@ -60,8 +63,8 @@ module.exports = [
 	},
 	{
 		active,
-		path: 'boxes',
-		name: 'SD cards box',
+		path,
+		name: `${namePrefix} box`,
 		params: {
 			width: boxWidth,
 			length: boxLength,
@@ -80,8 +83,8 @@ module.exports = [
 	},
 	{
 		active,
-		path: 'boxes',
-		name: 'SD cards cover',
+		path,
+		name: `${namePrefix} cover`,
 		params: {
 			width: coverWidth,
 			length: coverLength,
