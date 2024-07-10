@@ -2,43 +2,20 @@ const active = false;
 const path = 'boxes/seamless-lid';
 
 /*
-// for code development
-const thickness = 5;
-const gap = 1;
-const dimensions = {
-	width: 50,
-	length: 40,
-	height: 30,
-	lidHeight: 12.5,
-};
-const lidOverflow = 0;
-
 // for print test
 const thickness = 1;
-const gap = 0.2;
+const gap = 0.1;
 const dimensions = {
 	width: 10,
 	length: 15,
-	height: 5,
-	lidHeight: 2,
+	height: 20,
+	lidHeight: 5,
 };
 const lidOverflow = 0;
 
-// for small HDs
+// for external HDDs
 const thickness = 2;
-const gap = 0.2;
-const dimensions = {
-	width: 70 + 8.4,
-	length: 120 + 8.4,
-	height: 50 + 1,
-	lidHeight: 10,
-};
-const lidOverflow = 50 + 1;
-*/
-
-// for external HDs
-const thickness = 2;
-const gap = 0.2;
+const gap = 0.1;
 const dimensions = {
 	width: 85 + 8.4,
 	length: 60 + 8.4,
@@ -46,6 +23,19 @@ const dimensions = {
 	lidHeight: 10,
 };
 const lidOverflow = 50 + 1;
+*/
+
+// for small internal HDDs
+const thickness = 2;
+const gap = 0.1;
+const dimensions = {
+	width: 70 + 8.4,
+	length: 120 + 8.4,
+	height: 50 + 1,
+	lidHeight: 10,
+};
+const lidOverflow = 50 + 1;
+
 
 const outterHeight = dimensions.height - dimensions.lidHeight;
 const outter = {
@@ -102,7 +92,9 @@ const innerDimmensions = {
 	length: inner.hoc[1],
 	height: inner.hoc[2] * (-1),
 };
-console.log(`${path} inner dimensions = `, JSON.stringify(innerDimmensions, null, 2));
+if( active ){
+	console.log(`${path} inner dimensions = `, JSON.stringify(innerDimmensions, null, 2));
+}
 
 module.exports = [
 	{

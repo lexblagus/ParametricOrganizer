@@ -64,9 +64,9 @@ const divisions = {
 
 const heights = [
 	25,
-	/* 50,
+	50,
 	75,
-	100 */
+	100
 ];
 
 const variations = [
