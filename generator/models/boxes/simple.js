@@ -25,7 +25,6 @@ const divisions = [1, 1];
 const path = 'makeup/bin-dividers',
 const name = 'Bin 1 4x1 individual',
 
-*/
 
 // Hard drive case
 const wall = 2;
@@ -35,6 +34,17 @@ const height = 50;
 const divisions = [1, 1];
 const path = 'boxes';
 const name = 'Simple box';
+
+*/
+
+// Lojinha
+const wall = 2;
+const width = 150; // printing: // + (wall * 2);
+const length = 350 / 2;
+const height = 75; // 50;
+const divisions = [1, 1];
+const path = 'boxes';
+const name = `Lojinha ${width}x${length}x${height}`;
 
 module.exports = [{
 	active,
