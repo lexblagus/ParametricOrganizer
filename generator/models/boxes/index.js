@@ -10,6 +10,7 @@ const USBDrivesShort = require('./usb-drives-short');
 const InternalSSDs = require('./internal-ssds');
 const miniRemoteControlBox = require('./mini-remote-control-box');
 const chessSetBox = require('./chess-set-box');
+const byModule = require('./by-module');
 
 module.exports = [
 	...simple,
@@ -24,4 +25,5 @@ module.exports = [
 	...InternalSSDs,
 	...miniRemoteControlBox,
 	...chessSetBox,
+	...byModule,
 ];

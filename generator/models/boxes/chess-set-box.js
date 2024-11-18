@@ -38,7 +38,7 @@ const cornerHoc = [
 module.exports = [
 	{
 		active,
-		path: 'boxes',
+		path: 'boxes/etc',
 		name: 'Box for chess pieces',
 		params: {
 			width:  boxDimensions[0],

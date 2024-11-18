@@ -12,7 +12,7 @@ const dimensions = [
 module.exports = [
 	{
 		active,
-		path: 'boxes',
+		path: 'boxes/etc',
 		name: 'Mini remote control box',
 		params: {
 			width: dimensions[0],

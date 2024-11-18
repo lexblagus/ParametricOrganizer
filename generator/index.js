@@ -5,8 +5,8 @@ const templateModels = require('./models');
 
 const execOpenSCAD = '/Applications/OpenSCAD.app/Contents/MacOS/OpenSCAD';
 const inputFilename = '../files/ParametricOrganizer.scad';
-const outputJson = './exports/ParametricOrganizer.json'; // or '../files/ParametricOrganizer.json'
-const dirOutput = `./exports`;
+const outputJson = 'ParametricOrganizer.json'; // or '../files/ParametricOrganizer.json'
+const dirOutput = `../../exports`;
 const dryRun = false; // dafeult: false
 const activeOnly = true; // default: true
 const clearDir = true; // default: true
@@ -69,7 +69,7 @@ templateModels.map(templateModel => {
 if( !dryRun ){
 	console.log('='.repeat(80));
 	fs.writeFile(
-		outputJson,
+		`${dirOutput}/${outputJson}`,
 		JSON.stringify(json, null, ' '.repeat(4)),
 		err => {
 			if (err) {
