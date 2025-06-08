@@ -9,6 +9,7 @@ const drillsWoodWide = require('./drills-wood-wide');
 const dremelCarvingCutters = require('./dremel-carving-cutters');
 const dremelBitsLarge6x6 = require('./dremel-bits-L-6x6');
 const dremelBitsLargeNx9 = require('./dremel-bits-L-Nx9');
+const ratchetWrenchSockets = require('./ratchet-wrench-sockets');
 
 module.exports = [
 	...hexBits,
@@ -22,4 +23,5 @@ module.exports = [
 	...dremelCarvingCutters,
 	...dremelBitsLarge6x6,
 	...dremelBitsLargeNx9,
+	...ratchetWrenchSockets,
 ];
