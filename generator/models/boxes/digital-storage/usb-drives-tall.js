@@ -1,10 +1,10 @@
 const active = false;
-const path = 'boxes/internal-ssds';
-const namePrefix = 'Internal SSD';
+const path = 'boxes/digital-storage';
+const namePrefix = 'USB drives tall';
 
-const msdcDimensions = [22.5, 80, 5]; // width, height, thickness
-const visibleHeight = msdcDimensions[1] - 20; // naked area
-const moduleQtt = [2, 5]; // cols, rows
+const deviceDimensions = [12.15, 75, 4.55]; // width, height, thickness
+const visibleHeight = deviceDimensions[1] - 10; // naked area
+const moduleQtt = [3, 7]; // cols, rows
 const floorHeight = 1; // floor thickness
 const wallThickness = floorHeight;
 const lidHeight = 15;
@@ -14,25 +14,25 @@ const clearanceBox = 0.25;
 const clearanceLid = 0.10;
 const spacingXBetween = 4.25;
 const spacingYBetween = 2.5;
- 
+
 
 const width = 
-	(moduleQtt[0] * (msdcDimensions[0] + clearanceGrid)) +
+	(moduleQtt[0] * (deviceDimensions[0] + clearanceGrid)) +
 	((moduleQtt[0] + 1) * spacingXBetween);
 const length = 
-	(moduleQtt[1] * (msdcDimensions[2] + clearanceGrid)) +
+	(moduleQtt[1] * (deviceDimensions[2] + clearanceGrid)) +
 	((moduleQtt[1] + 1) * spacingYBetween);
-const height = msdcDimensions[1] + floorHeight - visibleHeight;
-const hocWidth = msdcDimensions[0] + (clearanceGrid * 2);
-const hocLength = msdcDimensions[2] + (clearanceGrid * 2);
+const height = deviceDimensions[1] + floorHeight - visibleHeight;
+const hocWidth = deviceDimensions[0] + (clearanceGrid * 2);
+const hocLength = deviceDimensions[2] + (clearanceGrid * 2);
 const hocHeight = 0 - height + floorHeight;
 
 const boxWidth = width + (wallThickness * 2) + (clearanceBox * 2);
 const boxLength = length + (wallThickness * 2) + (clearanceBox * 2);
-const boxHeight = msdcDimensions[1] + (floorHeight * 2) + clearanceFloor;
+const boxHeight = deviceDimensions[1] + (floorHeight * 2) + clearanceFloor;
 const boxHocWidth = width + (clearanceBox * 2);
 const boxHocLength = length + (clearanceBox * 2);
-const boxHocHeight = 0 - msdcDimensions[1];
+const boxHocHeight = 0 - deviceDimensions[1];
 
 const lidWidth = boxWidth + (wallThickness * 2) + (clearanceLid * 2);
 const lidLength = boxLength + (wallThickness * 2) + (clearanceLid * 2);
