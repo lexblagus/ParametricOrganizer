@@ -7,6 +7,7 @@ const miniRemoteControlBox = require('./mini-remote-control-box');
 const chessSetBox = require('./chess-set-box');
 const byModule = require('./by-module');
 const digitalStorage = require('./digital-storage');
+const shavingRazorDocks = require('./shaving-razor-docks');
 
 module.exports = [
 	...simple,
@@ -18,4 +19,5 @@ module.exports = [
 	...chessSetBox,
 	...byModule,
 	...digitalStorage,
+	...shavingRazorDocks,
 ];
