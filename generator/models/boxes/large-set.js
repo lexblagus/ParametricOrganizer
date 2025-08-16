@@ -165,6 +165,7 @@ module.exports = variations.map(
 						4, // faces
 						0, // rotation
 					],
+					distributed: true,
 				},
 			})
 		)

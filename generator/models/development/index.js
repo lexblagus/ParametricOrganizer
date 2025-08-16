@@ -187,6 +187,72 @@ const development = [
 			],
 		},
 	},
+	{
+		active,
+		path: 'development',
+		name: 'Development model 7 centering adjustment',
+		params: {
+			width: 100,
+			length: 100,
+			height: 10,
+			floorHeight: 1,
+			moduleQtt: [10, 10],
+			hoc: [9.9, 9.9, -9, 0, 4, 0],
+			moduleConfig: []
+		},
+	},
+	{
+		active,
+		path: 'development',
+		name: 'Development model 8-1 centering adjustment',
+		params: {
+			width: 100,
+			length: 100,
+			height: 5,
+			floorHeight: 0.1,
+			moduleQtt: [10, 10],
+			hoc: [9.9, 9.9, 2, 0, 4, 0],
+			moduleConfig: [...Array(  10  )].map(
+				(x, xi) => [...Array(  10  )].map(
+					(y, yi) => [
+						(((xi + 1) * (yi + 1)) / 10),
+						(((xi + 1) * (yi + 1)) / 10),
+						-4,
+						(xi % 2 === 0 && yi % 2 === 0) || (xi % 2 !== 0 && yi % 2 !== 0) ? 0.5 : -0.5,
+						8,
+						0
+					]
+				).reverse(),
+			),
+			distributed: false,
+		},
+	},
+	{
+		active,
+		path: 'development',
+		name: 'Development model 8-2 centering adjustment',
+		params: {
+			width: 100,
+			length: 100,
+			height: 5,
+			floorHeight: 0.1,
+			moduleQtt: [10, 10],
+			hoc: [9.9, 9.9, 2, 0, 4, 0],
+			moduleConfig: [...Array(  10  )].map(
+				(x, xi) => [...Array(  10  )].map(
+					(y, yi) => [
+						(((xi + 1) * (yi + 1)) / 10),
+						(((xi + 1) * (yi + 1)) / 10),
+						-4,
+						(xi % 2 === 0 && yi % 2 === 0) || (xi % 2 !== 0 && yi % 2 !== 0) ? 0.5 : -0.5,
+						8,
+						0
+					]
+				).reverse(),
+			),
+			distributed: true,
+		},
+	},
 ];
 
 // =============================================================================

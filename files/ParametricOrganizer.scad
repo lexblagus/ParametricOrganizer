@@ -6,14 +6,14 @@ CONFIG
 $fn=360 / 10;
 
 // Outter shell
-width = 30;
-length = 20;
+width = 20;
+length = 30;
 height = 10;
 floorHeight = 1;
 
 // Modules encapsulate a hoc
 // [equal-size] or [rows, cols]
-moduleQtt = [ 3 , 2 ];
+moduleQtt = [ 2 , 3 ];
 
 // "Hoc" stands for "hole or chanfer"
 // This is the default configuration.
@@ -42,14 +42,36 @@ hoc = [
 
 	// Rotation
 	// 0 auto-calculates based on faces
-	0 // 360 / 8 / 2
+	0
 ];
 
 // Optional, to make custom hocs per cell
 // Will be merged with default hoc above.
-moduleConfig = [];
+moduleConfig = [
+	/*
+	[
+		[
+			10 - 1, // increased shape diameter
+			10 - 1, // increased shape diameter
+			1, // it grows up from the top
+			-2, // module is lowered
+			5, // pentagon
+			45 // rotated
+		]
+	,
+		[
+			10 - 1,
+			10 - 1,
+			-6, // negative make it a hole
+			2, // module grows out
+			3, // triangle
+			0
+		]
+	]
+	*/
+];
 
-
+distributed = false; // equalize distribution (center offset adjustment per module) or center hoc on each module
 
 
 
@@ -115,7 +137,7 @@ module elemHoc(x, y, z, a, b) {
 							[x, 0],
 							[x / 2, y]
 						];
-						color(green, trnsp) polygon(dv); // triangle
+						color("green", trnsp) polygon(dv); // triangle
 					}
 				}
 			}
@@ -157,10 +179,6 @@ module moduleBody(x, y, z) {
 }
 
 
-module distribution(){
-}
-
-
 module start(){
 	echo("Script start");
 	
@@ -185,19 +203,21 @@ module start(){
 		]
 	];
 
+	moduleWidth = width / moduleQtt[0];
+	moduleLength = length / moduleQtt[1];
+
 	for (l = [0 : ( moduleQtt[0] - 1 )]){
 		for (m = [0 : ( moduleQtt[1] - 1 )]){
 			translate([
-				(  width / moduleQtt[0] ) * l,
-				( length / moduleQtt[1] ) * m,
+				(  moduleWidth ) * l,
+				( moduleLength ) * m,
 				floorHeight
 			]){
 				moduleHeightIncrease = hocConf[l][m][3];
-				// ...
 
-				modSize = [
-					width / moduleQtt[0],
-					length / moduleQtt[1],
+				moduleSize = [
+					moduleWidth,
+					moduleLength,
 					bodyHeight + moduleHeightIncrease
 				];
 				
@@ -211,15 +231,36 @@ module start(){
 					hocConf[l][m][5] // rotation
 				];
 
-				hocPosition = [
-					(  ( width / moduleQtt[0] ) / 2  )  -  ( hocParams[0] / 2 )
+				centeredPosition = [
+					(  ( moduleSize[0] ) / 2  )  -  ( hocParams[0] / 2 )
 				,
-					(  ( length / moduleQtt[1] ) / 2  )  -  ( hocParams[1] / 2 )
+					(  ( moduleSize[1] ) / 2  )  -  ( hocParams[1] / 2 )
+				];
+				wallSize = [
+					( ( (width  / moduleQtt[0]) - hocParams[0] ) / 2 )
+				,
+					( ( (length  / moduleQtt[1]) - hocParams[1] ) / 2 )
+				];
+				ratio = [
+					moduleQtt[0] == 1 ? 0 : (  1 - l * (2 / (moduleQtt[0] % 2 == 0 ? moduleQtt[0] : moduleQtt[0] - 1))  ) / 2
+				,
+					moduleQtt[1] == 1 ? 0 : (  1 - m * (2 / (moduleQtt[1] % 2 == 0 ? moduleQtt[1] : moduleQtt[1] - 1))  ) / 2
+				];
+				centeringAdjustment = [
+					distributed ? wallSize[0] * ratio[0] : 0
+				,
+					distributed ? wallSize[1] * ratio[1] : 0
+				];
+
+				hocPosition = [
+					centeredPosition[0] + centeringAdjustment[0]
+				,
+					centeredPosition[1] + centeringAdjustment[1]
 				,
 					(
 						hocConf[l][m][2] > 0
 					) ? (
-						modSize[2]
+						moduleSize[2]
 					) : (
 						(bodyHeight + moduleHeightIncrease ) - abs(hocConf[l][m][2])
 					)
@@ -228,9 +269,9 @@ module start(){
 				if ( hocConf[l][m][2] > 0 ){
 					union(){
 						moduleBody(
-							modSize[0],
-							modSize[1],
-							modSize[2]
+							moduleSize[0],
+							moduleSize[1],
+							moduleSize[2]
 						);
 						translate([
 							hocPosition[0],
@@ -249,9 +290,9 @@ module start(){
 				} else {
 					difference(){
 						moduleBody(
-							modSize[0],
-							modSize[1],
-							modSize[2]
+							moduleSize[0],
+							moduleSize[1],
+							moduleSize[2]
 						);
 						translate([
 							hocPosition[0],
