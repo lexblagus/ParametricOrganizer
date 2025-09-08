@@ -3,6 +3,12 @@ const path = 'boxes/large-set';
 const wall = 2;
 
 const divisions = {
+	'1×0.5': [ // 50×25
+		[1, 1], [1, 2],
+		[2, 1], [2, 2], 
+		[3, 1], 
+		[4, 1], [4, 2],
+	],
 	'1×1': [
 		[1, 1],
 		[1, 2],
@@ -76,6 +82,12 @@ const heights = [
 ];
 
 const variations = [
+	{
+		active,
+		width: 50,
+		length: 25,
+		divisions: divisions['1×0.5'],
+	},
 	{
 		active,
 		width: 50,
